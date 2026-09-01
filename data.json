@@ -243,11 +243,11 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "syddjurs": {
-      "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-10-08",
       "links": [
         {
           "titel": "Budget 2027 (syddjurs.dk)",
@@ -256,7 +256,8 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "viborg": {
       "status": "forhandling",
@@ -340,11 +341,11 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "kolding": {
-      "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-08-09",
+      "forventetAftaleDato": "2026-08-19",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-09-23",
       "links": [
         {
           "titel": "Kolding Kommune – økonomi",
@@ -353,14 +354,15 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "toender": {
-      "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-08-24",
+      "forventetAftaleDato": "2026-09-03",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-10-09",
       "links": [
         {
           "titel": "Budget (toender.dk)",
@@ -369,7 +371,8 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "varde": {
       "status": "forhandling",
@@ -465,8 +468,8 @@
     },
     "lolland": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-27",
+      "forventetAftaleDato": "2026-10-07",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "links": [
@@ -475,9 +478,16 @@
           "url": "https://www.lolland.dk/om-kommunen/presse-og-kommunikation/nyheder/budget-2027-budgetpakker-offentliggjort"
         }
       ],
-      "resumeSocial": "Kommunen oplyser selv, at der mangler mere end 500 mio. kr. for at få budgettet til at gå op; der er fremlagt store spareforslag, bl.a. samling af tilbud, administration og digitalisering. Intet forlig indgået endnu.",
+      "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "budgetforslagLink": {
+        "titel": "Budget 2027: Budgetpakker offentliggjort (lolland.dk)",
+        "url": "https://www.lolland.dk/om-kommunen/presse-og-kommunikation/nyheder/budget-2027-budgetpakker-offentliggjort"
+      },
+      "budgetforslagSocialNaevnt": "Kommunen oplyser selv, at der mangler mere end 500 mio. kr. for at få budgettet til at gå op; der er fremlagt store spareforslag, bl.a. samling af tilbud, administration og digitalisering. Intet forlig indgået endnu.",
+      "budgetforslagBeskaeftigelseNaevnt": ""
     },
     "naestved": {
       "status": "forhandling",
@@ -514,11 +524,11 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "roskilde": {
-      "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-08-23",
+      "forventetAftaleDato": "2026-09-02",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-10-08",
       "links": [
         {
           "titel": "Budget (roskilde.dk)",
@@ -527,7 +537,8 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "slagelse": {
       "status": "ikke_startet",
@@ -570,8 +581,8 @@
     },
     "bornholm": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-08-23",
+      "forventetAftaleDato": "2026-09-02",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "links": [
@@ -582,7 +593,8 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "broendby": {
       "status": "ikke_startet",
@@ -601,11 +613,11 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "egedal": {
-      "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-07",
+      "forventetAftaleDato": "2026-09-17",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-10-08",
       "links": [
         {
           "titel": "Egedal Kommune – økonomi",
@@ -614,18 +626,25 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "fredensborg": {
-      "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-08-28",
+      "forventetAftaleDato": "2026-09-07",
       "aftaleDato": "",
       "vedtagelsesDato": "",
-      "links": [],
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://via.ritzau.dk/pressemeddelelse/14566086/et-samlet-byrad-star-bag-nyt-budget-i-fredensborg-kommune"
+        }
+      ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "frederikssund": {
       "status": "forhandling",
@@ -644,11 +663,11 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "gentofte": {
-      "status": "ikke_startet",
+      "status": "forhandling",
       "forventetForhandlingsStart": "",
       "forventetAftaleDato": "",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-10-09",
       "links": [
         {
           "titel": "Gentofte Kommune",
@@ -661,8 +680,8 @@
     },
     "gladsaxe": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-07",
+      "forventetAftaleDato": "2026-09-17",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-07",
       "links": [
@@ -673,7 +692,8 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "hoeje-taastrup": {
       "status": "forhandling",
@@ -699,11 +719,11 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "rudersdal": {
-      "status": "ikke_startet",
+      "status": "forhandling",
       "forventetForhandlingsStart": "",
       "forventetAftaleDato": "",
       "aftaleDato": "",
-      "vedtagelsesDato": "",
+      "vedtagelsesDato": "2026-10-08",
       "links": [
         {
           "titel": "Budget (rudersdal.dk)",
@@ -726,12 +746,1338 @@
           "url": "https://rk.dk/service-og-pressemeddelelser/service-og-pressemeddelelser-2026/budgetforslag-2027"
         }
       ],
-      "resumeSocial": "Budgetforslaget (ikke forlig) indeholder besparelser/effektiviseringer på ca. 27 mio. kr., primært drevet af udgifter til fordrevne ukrainere. Det specialiserede socialområde løftes med 64 mio. kr. årligt fra 2027 for at følge det stigende udgiftsbehov. Intet forlig indgået endnu.",
+      "resumeSocial": "",
       "resumeBeskaeftigelse": "",
       "socialGenopretningMio": 64,
       "socialGenopretningKilde": "budgetforslag",
       "socialGenopretningNote": "64 mio. kr. årligt fra 2027 foreslået til det specialiserede socialområde for at følge det stigende udgiftsbehov. Dette er forvaltningens forslag — ikke et indgået forlig, og tallet kan ændre sig i forhandlingerne.",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "budgetforslagLink": {
+        "titel": "Budgetforslag 2027: Rødovre holder fast i velfærden (rk.dk)",
+        "url": "https://rk.dk/service-og-pressemeddelelser/service-og-pressemeddelelser-2026/budgetforslag-2027"
+      },
+      "budgetforslagSocialNaevnt": "Budgetforslaget (ikke forlig) indeholder besparelser/effektiviseringer på ca. 27 mio. kr., primært drevet af udgifter til fordrevne ukrainere. Det specialiserede socialområde løftes med 64 mio. kr. årligt fra 2027 for at følge det stigende udgiftsbehov. Intet forlig indgået endnu.",
+      "budgetforslagBeskaeftigelseNaevnt": ""
+    },
+    "herning": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-01",
+      "forventetAftaleDato": "2026-09-11",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-07",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.herning.dk/om-kommunen/budget-og-regnskab/budgetter-og-regnskaber"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "holstebro": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-07",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.holstebro.dk/budget"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "ikast-brande": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-05",
+      "forventetAftaleDato": "2026-09-15",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://ikast-brande.dk/media/buydbbm1/budgetforlig-2026-med-underskrifter.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "lemvig": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-08-29",
+      "forventetAftaleDato": "2026-09-08",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://lemvig.dk/kommunen/nyhedsarkiv/enighed-om-budget-2026"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "faaborg-midtfyn": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-08",
+      "forventetAftaleDato": "2026-09-18",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-08",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.fmk.dk/om-kommunen/budget-og-regnskab/budget-2026/"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "langeland": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-09",
+      "forventetAftaleDato": "2026-09-19",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://langelandkommune.dk/om-kommunen/oekonomi/budget/budget-2026"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "svendborg": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-09",
+      "forventetAftaleDato": "2026-09-19",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.svendborg.dk/media/kyelzd5e/pjece-budgetforlig-2026.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "frederiksberg": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-06",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.frederiksberg.dk/kommunen/oekonomi/budget-2026"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "furesoe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-07",
+      "forventetAftaleDato": "2026-09-17",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-08",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.furesoe.dk/om-kommunen/fakta/oekonomi/budget/budget-2026"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "vordingborg": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Historisk kilde (Budget 2026)",
+          "url": "https://www.vordingborg.dk/kommunen/nyheder/2025/sep/bred-politisk-aftale-om-budget-2026-2029-med-fokus-paa-velfaerd-og-det-gode-liv-for-borgerne"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "broenderslev": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget og regnskab (bronderslev.dk)",
+          "url": "https://www.bronderslev.dk/om-kommunen/budget-regnskab-og-takster/budget-og-regnskab"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "hjoerring": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-09-05",
+      "forventetAftaleDato": "2026-09-15",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-08",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2026-2029 (hjoerring.dk)",
+          "url": "https://hjoerring.dk/Media/639003561082696257/Budget%202026-2029%20Hjrring%20Kommune.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "jammerbugt": {
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetforlig i Jammerbugt styrker de store velfærdsområder (DK Nyt)",
+          "url": "https://www.dknyt.dk/artikel/budgetforlig-i-jammerbugt-styrker-de-store-velfaerdsomraader"
+        }
+      ],
+      "resumeSocial": "Ifølge DK Nyt er et bredt flertal (Dansk Folkeparti, Danmarksdemokraterne, Venstre, SF, Socialdemokratiet) indgået i budgetforlig, som styrker de store velfærdsområder. Præcis dato er ikke bekræftet og bør verificeres direkte hos kommunen, før status regnes for endelig.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "laesoe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "morsoe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2026 og budgetoverslag 2027-2030 (mors.dk)",
+          "url": "https://mors.dk/media/g1fjun2c/budget-2026-og-budgetoverslag-2027-2030.pdf"
+        }
+      ],
+      "resumeSocial": "Ifølge kommunens eget budgetmateriale viser den ordinære skattefinansierede drift for 2027 et betydeligt underskud på 122 mio. kr., stigende til 158 mio. kr. i 2030 — store sociale udgifter er en del af forklaringen. Intet forlig for 2027 fundet endnu.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "rebild": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget vedtaget (rebild.dk)",
+          "url": "https://rebild.dk/budget-vedtaget"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "thisted": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "vesthimmerlands": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetter (vesthimmerland.dk)",
+          "url": "https://vesthimmerland.dk/om-kommunen/kommunens-oekonomi/budgetter"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "favrskov": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2026-08-24",
+      "forventetAftaleDato": "2026-09-03",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetaftale på plads i Favrskov (favrskov.dk)",
+          "url": "https://favrskov.dk/nyheder/budgetaftale-paa-plads-i-favrskov-1"
+        }
+      ],
+      "resumeSocial": "Sidste års (Budget 2026) budgetaftale stod 24 af 25 byrådsmedlemmer bag, efter budgetforslaget havde været i høring med 79 høringssvar.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "hedensted": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "norddjurs": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "2026-09-08",
+      "budgetforslagLink": {
+        "titel": "Budgetforslag 2027-2030, 1. behandling (norddjurs.dk)",
+        "url": "https://norddjurs.dk/politik-og-indflydelse/budget-og-regnskab/budgettet-hvad-sker-der-lige-nu/indsend-dit-forslag-til-budgettet"
+      },
+      "budgetforslagSocialNaevnt": "Ny runde råderumsforslag berører bl.a. skole-, ældre- og socialområdet.",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetforslag 2027-2030, 1. behandling (norddjurs.dk)",
+          "url": "https://norddjurs.dk/politik-og-indflydelse/budget-og-regnskab/budgettet-hvad-sker-der-lige-nu/indsend-dit-forslag-til-budgettet"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "odder": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "samsoe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "skive": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "struer": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "assens": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "billund": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "fanoe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2023-10-09",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2024-2027 (fanoe.dk)",
+          "url": "https://fanoe.dk/media/dqvlwtso/faerdig-budget-fra-budgetaaret-20242027.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "haderslev": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "middelfart": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "nordfyns": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2025-08-29",
+      "forventetAftaleDato": "2025-09-08",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-10-09",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetprocessen (nordfynskommune.dk)",
+          "url": "https://www.nordfynskommune.dk/vores-kommune/budget-og-regnskab/budgetprocessen/"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "nyborg": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2027, projektside (viskaber.nyborg.dk)",
+          "url": "https://viskaber.nyborg.dk/da-DK/projects/budget-2027"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "soenderborg": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2023-10-11",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetaftale 2024-2027 (sonderborgkommune.dk)",
+          "url": "https://sonderborgkommune.dk/sites/default/files/2023-10/Budgetaftale%202024-2027%20.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "vejen": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "aeroe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "aabenraa": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "2025-08-23",
+      "forventetAftaleDato": "2025-09-02",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Så er millionerne fordelt (jv.dk)",
+          "url": "https://jv.dk/aabenraa/saa-er-millionerne-fordelt-se-her-hvem-der-faar-penge-i-naeste-aars-budget"
+        }
+      ],
+      "resumeSocial": "Budget 2026 blev fremlagt på rådhuset 2. september 2025 med hele byrådet bag.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
+    },
+    "faxe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "2026-08-27",
+      "budgetforslagLink": {
+        "titel": "Budget 2027 (faxekommune.dk)",
+        "url": "https://www.faxekommune.dk/da/budget2027"
+      },
+      "budgetforslagSocialNaevnt": "Borgmesterens budgetforslag indeholder reduktioner og opprioriteringer i separate bilag; ikke nærmere specificeret for social-/beskæftigelsesområdet i det fundne materiale.",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2027 (faxekommune.dk)",
+          "url": "https://www.faxekommune.dk/da/budget2027"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "kalundborg": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2026-2029 (kalundborg.dk)",
+          "url": "https://cdn.kalundborg.dk/kalundborgkommune/Media/639014713980517744/budget-2026-2029.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "koege": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "lejre": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "odsherred": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "2026-08-28",
+      "budgetforslagLink": {
+        "titel": "Budget (odsherred.dk)",
+        "url": "https://www.odsherred.dk/da/foelge-politik-og-udvikling/okonomi-og-resultater/budget/"
+      },
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget (odsherred.dk)",
+          "url": "https://www.odsherred.dk/da/foelge-politik-og-udvikling/okonomi-og-resultater/budget/"
+        }
+      ],
+      "resumeSocial": "Kommunen har ifølge TV2 ØST et minus på over 40 mio. kr. og har tidligere søgt og fået særtilskud som vanskeligt stillet kommune (40 mio. kr. sidste år) — en generel økonomisk genopretningssituation, ikke specifikt øremærket socialområdet.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "solroed": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "soroe": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "stevns": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "albertslund": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-06",
+      "budgetforslagDato": "2026-08-19",
+      "budgetforslagLink": {
+        "titel": "Budget 2027, budgetkatalog i høring (albertslund.dk)",
+        "url": "https://albertslund.dk/budget2027"
+      },
+      "budgetforslagSocialNaevnt": "Kommunen skal finde et råderum på 57,4 mio. kr. årligt i driften.",
+      "budgetforslagBeskaeftigelseNaevnt": "Derudover 7,5 mio. kr. afledt af beskæftigelsesreformen.",
+      "links": [
+        {
+          "titel": "Budget 2027, budgetkatalog i høring (albertslund.dk)",
+          "url": "https://albertslund.dk/budget2027"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "alleroed": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "2026-08-27",
+      "budgetforslagLink": {
+        "titel": "Administrativt budgetgrundlag, sparekatalog (alleroed-online.dk)",
+        "url": "https://www.alleroed-online.dk/budgetforslag-hoejere-betaling-for-fritids-og-ungdomsklubber-i-alleroed/"
+      },
+      "budgetforslagSocialNaevnt": "Sparekatalog med 44 forslag for i alt 22 mio. kr., bl.a. øget brugerbetaling for fritids-/ungdomsklubber (4,5 mio. kr. årligt).",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Administrativt budgetgrundlag, sparekatalog (alleroed-online.dk)",
+          "url": "https://www.alleroed-online.dk/budgetforslag-hoejere-betaling-for-fritids-og-ungdomsklubber-i-alleroed/"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "dragoer": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-09-25",
+      "budgetforslagDato": "2026-08-14",
+      "budgetforslagLink": {
+        "titel": "Budget 2027-2030, høring (dragoer.dk)",
+        "url": "https://www.dragoer.dk/om-kommunen/oekonomi/budget"
+      },
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2027-2030, høring (dragoer.dk)",
+          "url": "https://www.dragoer.dk/om-kommunen/oekonomi/budget"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "glostrup": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-10-08",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetproces (glostrup.dk)",
+          "url": "https://www.glostrup.dk/demokrati/budgetproces-budget-regnskab-og-skatter/budgetproces"
+        },
+        {
+          "titel": "Aftale om budgettet klar i Glostrup (mynewsdesk)",
+          "url": "https://www.mynewsdesk.com/dk/glostrup-kommune/pressreleases/aftale-om-budgettet-klar-i-glostrup-3271369"
+        }
+      ],
+      "resumeSocial": "Toårig budgetaftale for 2025+2026 mellem A, C, SF og B; for Budget 2026 var der stort pres på specialundervisningsområdet.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "gribskov": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-08",
+      "budgetforslagDato": "2026-09-01",
+      "budgetforslagLink": {
+        "titel": "Gribskov Kommune forventer budgetunderskud (gribskov.dk)",
+        "url": "https://gribskov.dk/nyheder/2026/maj/gribskov-kommune-forventer-budgetunderskud"
+      },
+      "budgetforslagSocialNaevnt": "Borgmester Trine Egetved (K): \"Gribskov Kommunes budget for 2026 ser aktuelt ud til at lande med et underskud på driften på 88 mio. kr. … Nu handler det om at stoppe den akutte blødning – og lægge en langsigtet plan for at genoprette økonomien.\" Særligt fokus på folkeskole, ældrepleje og specialiserede socialtilbud.",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Gribskov Kommune forventer budgetunderskud (gribskov.dk)",
+          "url": "https://gribskov.dk/nyheder/2026/maj/gribskov-kommune-forventer-budgetunderskud"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "halsnaes": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-10-09",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget 2026, høring (halsnaes.dk)",
+          "url": "https://halsnaes.dk/politik/hoeringer-afgoerelser-og-udbud/2026"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "helsingoer": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget (helsingor.dk)",
+          "url": "https://www.helsingor.dk/demokrati/oekonomi/budget"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "herlev": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "2026-08-20",
+      "budgetforslagLink": {
+        "titel": "Stramt budgetforslag: Ingen midler at forhandle om (heleherlev.dk)",
+        "url": "https://heleherlev.dk/stramt-budgetforslag-ingen-midler-at-forhandle-om/"
+      },
+      "budgetforslagSocialNaevnt": "Forvaltningens budgetforslag er stramt uden frie midler at forhandle om (modsat 2026, hvor der var 49 mio. kr.). Forventet merforbrug i 2026 på ca. 40 mio. kr.; fokus er at overholde servicerammen snarere end egentlig social-genopretning.",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Stramt budgetforslag: Ingen midler at forhandle om (heleherlev.dk)",
+          "url": "https://heleherlev.dk/stramt-budgetforslag-ingen-midler-at-forhandle-om/"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "hilleroed": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "2026-08-27",
+      "budgetforslagLink": {
+        "titel": "Budgetforslag 2027-2030, høring (hillerod.dk)",
+        "url": "https://www.hillerod.dk/nyheder-og-fakta/nyheder/2026/kom-til-borgermode-om-budget-2027/"
+      },
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetforslag 2027-2030, høring (hillerod.dk)",
+          "url": "https://www.hillerod.dk/nyheder-og-fakta/nyheder/2026/kom-til-borgermode-om-budget-2027/"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "hvidovre": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget (hvidovre.dk)",
+          "url": "https://www.hvidovre.dk/om-kommunen/nogletal-og-okonomi/budget/"
+        }
+      ],
+      "resumeSocial": "For Budget 2026 blev der givet et løft til specialiserede områder på 31 mio. kr. samt en udisponeret pulje på 15 mio. kr.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "hoersholm": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "2026-09-14",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2026-10-05",
+      "budgetforslagDato": "2026-08-14",
+      "budgetforslagLink": {
+        "titel": "Hørsholm Kommune står over for svære budgetforhandlinger (horsholm.dk)",
+        "url": "https://www.horsholm.dk/nyhed/hoersholm-kommune-staar-over-for-svaere-budgetforhandlinger"
+      },
+      "budgetforslagSocialNaevnt": "Kommunen ligger 56 mio. kr. over servicerammen før forhandlingerne. Borgmester Morten Slotved (K): \"Det er større besparelser, end jeg har prøvet før … Jeg tror, jeg skal tilbage til mit første år som borgmester i 2010 … Og det er altså voldsomt.\" Udgiftspres fra specialiserede velfærdsområder, flere ældre, stigende sygedagpenge/forsikrede ledige.",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Hørsholm Kommune står over for svære budgetforhandlinger (horsholm.dk)",
+          "url": "https://www.horsholm.dk/nyhed/hoersholm-kommune-staar-over-for-svaere-budgetforhandlinger"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "ishoej": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-10-06",
+      "budgetforslagDato": "2026-08-15",
+      "budgetforslagLink": {
+        "titel": "Rådighedskatalog for budget 2027 sendt i høring (ishoj.dk)",
+        "url": "https://ishoj.dk/borger/demokrati/byrad/radighedskatalog-for-budget-2027-er-sendt-i-horing/"
+      },
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Rådighedskatalog for budget 2027 (ishoj.dk)",
+          "url": "https://ishoj.dk/borger/demokrati/byrad/radighedskatalog-for-budget-2027-er-sendt-i-horing/"
+        },
+        {
+          "titel": "Budgetforlig 2026 (ishoj.dk)",
+          "url": "https://ishoj.dk/media/dfrh4hzl/budgetforlig-2026.pdf"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "lyngby-taarbaek": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-10-09",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budget (ltk.dk)",
+          "url": "https://www.ltk.dk/om-kommunen/noegletal-og-oekonomi/budget"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "taarnby": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Budgetaftale 2026-2029, bilag (taarnby.dk)",
+          "url": "https://www.taarnby.dk/media/mffnhhra/bilag_budgetaftalen_2026.pdf"
+        }
+      ],
+      "resumeSocial": "Kommunen har flere gange løftet det specialiserede socialområde i sin toårige budgetaftale (+20 mio. kr. i 2024, +10 mio. kr. i 2025, +10 mio. kr. i aftalen for 2026). Ny selvstændig 2027-aftale ikke fundet endnu.",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
+    },
+    "vallensbaek": {
+      "status": "forhandling",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "",
+      "vedtagelsesDato": "2025-09-15",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "links": [
+        {
+          "titel": "Bred aftale om budget for fremtidens Vallensbæk (vallensbaek.dk)",
+          "url": "https://www.vallensbaek.dk/nyheder/kommunen/bred-aftale-om-budget-fremtidens-vallensbaek"
+        }
+      ],
+      "resumeSocial": "",
+      "resumeBeskaeftigelse": "",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "sidstOpdateret": ""
     }
   },
   "NEWS_ITEMS": [
