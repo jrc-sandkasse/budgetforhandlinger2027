@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kommunale budgetforhandlinger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233A;
+    --ink-soft:#3D4C63;
+    --bg:#EAEDE7;
+    --surface:#FFFFFF;
+    --line:#D7DAD1;
+    --accent:#2C4A6E;
+    --accent-soft:#E4EAF0;
+    --status-none:#8B8F86;
+    --status-none-bg:#EDEEE9;
+    --status-forhandling:#B7791F;
+    --status-forhandling-bg:#FBF0DC;
+    --status-aftale:#2C6E8E;
+    --status-aftale-bg:#E1EEF3;
+    --status-vedtaget:#3F7A5C;
+    --status-vedtaget-bg:#E4F0E9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(44,74,110,0.06), transparent 45%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14px;
+    line-height:1.5;
+    min-height:100vh;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+  }
+  .app{max-width:1180px;margin:0 auto;padding:28px 24px 80px;}
+
+  header.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:18px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+  }
+  header.top h1{font-size:32px;letter-spacing:-0.015em;}
+  header.top p{margin:6px 0 0;color:var(--ink-soft);max-width:52ch;font-size:13.5px;}
+  .budget-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:5px 12px;
+    border-radius:20px;
+    white-space:nowrap;
+    box-shadow:0 1px 2px rgba(22,35,58,0.06);
+  }
+  .last-updated-badge{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  .gap-hero{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:linear-gradient(120deg, #4A1518 0%, #7A1F1F 55%, #A6371E 100%);
+    color:#fff;
+    border-radius:14px;
+    padding:22px 26px;
+    margin-bottom:20px;
+    box-shadow:0 8px 24px rgba(122,31,31,0.35);
+    flex-wrap:wrap;
+  }
+  .gap-hero-icon{font-size:36px;line-height:1;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.25));}
+  .gap-hero-main{flex:2;min-width:260px;}
+  .gap-hero-num{font-family:'Fraunces', serif;font-size:52px;font-weight:600;line-height:1;letter-spacing:-0.01em;}
+  .gap-hero-unit{font-size:20px;font-weight:500;opacity:0.85;}
+  .gap-hero-label{font-size:13px;opacity:0.9;margin-top:6px;max-width:52ch;line-height:1.5;}
+  .gap-hero-label strong{color:#FFD7B0;}
+  .gap-hero-num-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .gap-hero-badge{
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    background:rgba(255,255,255,0.16);
+    border:1px solid rgba(255,255,255,0.35);
+    padding:3px 10px;
+    border-radius:20px;
+    opacity:0.9;
+  }
+  .gap-hero-breakdown-btn{
+    margin-top:12px;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.4);
+    color:#fff;
+    font-family:inherit;
+    font-size:12.5px;
+    font-weight:500;
+    padding:7px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:all 0.15s ease;
+  }
+  .gap-hero-breakdown-btn:hover{background:rgba(255,255,255,0.24);}
+
+  .breakdown-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .breakdown-row:last-child{border-bottom:none;}
+  .breakdown-kommune{font-weight:600;font-size:14px;}
+  .breakdown-note{font-size:12.5px;color:var(--ink-soft);margin-top:3px;line-height:1.5;max-width:42ch;}
+  .breakdown-amount{
+    font-family:'Fraunces', serif;
+    font-size:20px;
+    font-weight:600;
+    white-space:nowrap;
+    text-align:right;
+  }
+  .breakdown-amount .unit{font-size:12px;font-weight:500;color:var(--ink-soft);}
+
+  .news-bar{margin-bottom:22px;}
+  .news-bar-label{font-size:11.5px;font-weight:600;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;}
+  .news-scroll{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:4px;
+    scrollbar-width:thin;
+  }
+  .news-scroll::-webkit-scrollbar{height:6px;}
+  .news-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px;}
+  .news-card{
+    flex:0 0 auto;
+    width:230px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:11px 13px;
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    box-shadow:0 1px 2px rgba(22,35,58,0.04);
+    transition:all 0.15s ease;
+  }
+  .news-card:hover{border-color:var(--accent);box-shadow:0 4px 10px rgba(22,35,58,0.1);transform:translateY(-1px);}
+  .news-source{font-size:10.5px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.03em;}
+  .news-title{font-size:12.5px;color:var(--ink);line-height:1.4;margin-top:4px;font-weight:500;}
+  .news-date{font-size:11px;color:var(--ink-soft);margin-top:6px;}
+
+  .stat-strip{
+    display:flex;
+    gap:0;
+    border:1px solid var(--line);
+    background:var(--surface);
+    margin-bottom:20px;
+    overflow:hidden;
+    flex-wrap:wrap;
+    border-radius:10px;
+    box-shadow:0 1px 3px rgba(22,35,58,0.05);
+  }
+  .stat{
+    flex:1;
+    min-width:130px;
+    padding:16px 18px;
+    border-right:1px solid var(--line);
+    transition:background 0.15s ease;
+  }
+  .stat:hover{background:#FAFAF7;}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'Fraunces', serif;font-size:28px;font-weight:600;line-height:1;}
+  .stat .label{font-size:12px;color:var(--ink-soft);margin-top:4px;}
+
+  .toolbar{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:14px;
+  }
+  .toolbar input[type=text]{
+    flex:1;
+    min-width:180px;
+    padding:8px 10px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    font-family:inherit;
+    font-size:13.5px;
+    border-radius:3px;
+  }
+  select{
+    padding:7px 8px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    font-family:inherit;
+    font-size:13px;
+    border-radius:3px;
+    color:var(--ink);
+  }
+  .chip-row{display:flex;gap:6px;flex-wrap:wrap;}
+  .chip{
+    padding:6px 13px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    border-radius:20px;
+    font-size:12.5px;
+    cursor:pointer;
+    color:var(--ink-soft);
+    user-select:none;
+    transition:all 0.12s ease;
+  }
+  .chip:hover{border-color:var(--accent);color:var(--accent);}
+  .chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .sort-chip{margin-left:auto;white-space:nowrap;}
+  .section-title{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-soft);
+    margin:0 0 8px;
+    text-transform:none;
+  }
+
+  table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,58,0.05);}
+  thead th{
+    text-align:left;
+    font-size:11.5px;
+    text-transform:none;
+    color:var(--ink-soft);
+    font-weight:500;
+    padding:11px 12px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+    white-space:nowrap;
+    background:#FAFAF7;
+  }
+  thead th:hover{color:var(--ink);}
+  tbody tr{border-bottom:1px solid var(--line);cursor:pointer;transition:background 0.12s ease;}
+  tbody tr:last-child{border-bottom:none;}
+  tbody tr:hover{background:var(--accent-soft);}
+  tbody td{padding:11px 12px;vertical-align:middle;font-size:13.5px;}
+  td.region{color:var(--ink-soft);font-size:12.5px;}
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
+    white-space:nowrap;
+  }
+  .badge .dot{width:7px;height:7px;border-radius:50%;}
+  .badge.ikke_startet{background:var(--status-none-bg);color:var(--status-none);}
+  .badge.ikke_startet .dot{background:var(--status-none);}
+  .badge.forhandling{background:var(--status-forhandling-bg);color:var(--status-forhandling);}
+  .badge.forhandling .dot{background:var(--status-forhandling);}
+  .badge.aftale_indgaaet{background:var(--status-aftale-bg);color:var(--status-aftale);}
+  .badge.aftale_indgaaet .dot{background:var(--status-aftale);}
+  .badge.vedtaget{background:var(--status-vedtaget-bg);color:var(--status-vedtaget);}
+  .badge.vedtaget .dot{background:var(--status-vedtaget);}
+
+  .empty-cell{color:#B7BAB1;}
+
+  .soon{font-weight:600;color:var(--status-forhandling);}
+
+  /* Modal */
+  .overlay{
+    position:fixed;inset:0;background:rgba(22,35,58,0.4);
+    backdrop-filter:blur(2px);
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:40px 16px;overflow-y:auto;z-index:50;
+  }
+  .modal{
+    background:var(--surface);
+    max-width:640px;width:100%;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:26px 28px 28px;
+    box-shadow:0 12px 32px rgba(22,35,58,0.18);
+  }
+  .modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;}
+  .modal-head h2{font-size:23px;}
+  .modal-head .region-tag{font-size:12.5px;color:var(--ink-soft);margin-top:5px;}
+  .close-btn{
+    background:none;border:none;font-size:20px;cursor:pointer;color:var(--ink-soft);
+    line-height:1;padding:4px;border-radius:6px;transition:all 0.12s ease;
+  }
+  .close-btn:hover{color:var(--ink);background:var(--accent-soft);}
+
+  .proposal-box{
+    margin-top:16px;
+    background:linear-gradient(180deg, #FBF8F1, #F7F4EC);
+    border:1px solid #E8DFC8;
+    border-radius:10px;
+    padding:13px 16px;
+  }
+  .proposal-box-head{display:flex;align-items:center;gap:10px;}
+  .proposal-icon{font-size:18px;}
+  .proposal-title{font-size:13px;font-weight:600;color:var(--ink);}
+  .proposal-date{font-size:12px;color:var(--ink-soft);margin-top:1px;}
+  .proposal-link{margin-top:8px;font-size:13px;}
+  .proposal-link a{color:var(--accent);text-decoration:none;}
+  .proposal-link a:hover{text-decoration:underline;}
+  .proposal-flag{margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--ink-soft);background:rgba(255,255,255,0.6);border-radius:6px;padding:8px 10px;}
+  .proposal-flag strong{color:var(--ink);}
+  .brief-dates{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 24px;
+    margin-top:18px;
+    padding:14px 16px;
+    background:#F7F7F3;
+    border:1px solid var(--line);
+  }
+  .brief-row{display:flex;flex-direction:column;gap:2px;}
+  .brief-label{font-size:11.5px;color:var(--ink-soft);}
+  .brief-value{font-size:14px;font-family:'IBM Plex Mono', monospace;}
+  .brief-section{margin-top:20px;}
+  .brief-section h3{font-size:13px;font-weight:600;color:var(--ink-soft);margin:0 0 6px;font-family:'IBM Plex Sans', sans-serif;}
+  .brief-section p{margin:0;font-size:14px;line-height:1.6;}
+  .kilde-tag{
+    font-size:10.5px;
+    font-weight:500;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:2px 8px;
+    border-radius:10px;
+    margin-left:6px;
+    vertical-align:middle;
+    text-transform:none;
+  }
+  .gap-metric{
+    margin-top:10px;
+    background:#FCF6E8;
+    border:1px solid #EFDFAF;
+    border-radius:8px;
+    padding:9px 12px;
+    font-size:13px;
+    line-height:1.5;
+  }
+  .gap-metric-note{font-size:12px;color:var(--ink-soft);}
+  .close-btn-text{
+    border:1px solid var(--line);background:var(--surface);border-radius:3px;
+    cursor:pointer;font-size:13px;padding:8px 16px;color:var(--ink);font-family:inherit;
+  }
+  .close-btn-text:hover{border-color:var(--ink);}
+  .modal-footer{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-top:22px;padding-top:16px;border-top:1px solid var(--line);
+  }
+  .updated-at{font-size:11.5px;color:#9BA098;}
+  .doc-links a{color:var(--accent);text-decoration:none;font-size:13px;}
+  .doc-links a:hover{text-decoration:underline;}
+  .doc-count{font-size:12.5px;color:var(--ink-soft);}
+
+  footer.appfoot{margin-top:26px;font-size:12px;color:var(--ink-soft);}
+  .loading{padding:60px;text-align:center;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+<div id="root" class="app"><div class="loading">Indlæser…</div></div>
+
+<script>
+const REGIONS = ["Nordjylland","Midtjylland","Syddanmark","Sjælland","Hovedstaden"];
+
+const KOMMUNER = [
+  ["Brønderslev","Nordjylland"],["Frederikshavn","Nordjylland"],["Hjørring","Nordjylland"],
+  ["Jammerbugt","Nordjylland"],["Læsø","Nordjylland"],["Mariagerfjord","Nordjylland"],
+  ["Morsø","Nordjylland"],["Rebild","Nordjylland"],["Thisted","Nordjylland"],
+  ["Vesthimmerlands","Nordjylland"],["Aalborg","Nordjylland"],
+
+  ["Favrskov","Midtjylland"],["Hedensted","Midtjylland"],["Herning","Midtjylland"],
+  ["Holstebro","Midtjylland"],["Horsens","Midtjylland"],["Ikast-Brande","Midtjylland"],
+  ["Lemvig","Midtjylland"],["Norddjurs","Midtjylland"],["Odder","Midtjylland"],
+  ["Randers","Midtjylland"],["Ringkøbing-Skjern","Midtjylland"],["Samsø","Midtjylland"],
+  ["Silkeborg","Midtjylland"],["Skanderborg","Midtjylland"],["Skive","Midtjylland"],
+  ["Struer","Midtjylland"],["Syddjurs","Midtjylland"],["Viborg","Midtjylland"],
+  ["Aarhus","Midtjylland"],
+
+  ["Assens","Syddanmark"],["Billund","Syddanmark"],["Esbjerg","Syddanmark"],
+  ["Fanø","Syddanmark"],["Fredericia","Syddanmark"],["Faaborg-Midtfyn","Syddanmark"],
+  ["Haderslev","Syddanmark"],["Kerteminde","Syddanmark"],["Kolding","Syddanmark"],
+  ["Langeland","Syddanmark"],["Middelfart","Syddanmark"],["Nordfyns","Syddanmark"],
+  ["Nyborg","Syddanmark"],["Odense","Syddanmark"],["Svendborg","Syddanmark"],
+  ["Sønderborg","Syddanmark"],["Tønder","Syddanmark"],["Varde","Syddanmark"],
+  ["Vejen","Syddanmark"],["Vejle","Syddanmark"],["Ærø","Syddanmark"],["Aabenraa","Syddanmark"],
+
+  ["Faxe","Sjælland"],["Greve","Sjælland"],["Guldborgsund","Sjælland"],["Holbæk","Sjælland"],
+  ["Kalundborg","Sjælland"],["Køge","Sjælland"],["Lejre","Sjælland"],["Lolland","Sjælland"],
+  ["Næstved","Sjælland"],["Odsherred","Sjælland"],["Ringsted","Sjælland"],["Roskilde","Sjælland"],
+  ["Slagelse","Sjælland"],["Solrød","Sjælland"],["Sorø","Sjælland"],["Stevns","Sjælland"],
+  ["Vordingborg","Sjælland"],
+
+  ["Albertslund","Hovedstaden"],["Allerød","Hovedstaden"],["Ballerup","Hovedstaden"],
+  ["Bornholm","Hovedstaden"],["Brøndby","Hovedstaden"],["Dragør","Hovedstaden"],
+  ["Egedal","Hovedstaden"],["Fredensborg","Hovedstaden"],["Frederiksberg","Hovedstaden"],
+  ["Frederikssund","Hovedstaden"],["Furesø","Hovedstaden"],["Gentofte","Hovedstaden"],
+  ["Gladsaxe","Hovedstaden"],["Glostrup","Hovedstaden"],["Gribskov","Hovedstaden"],
+  ["Halsnæs","Hovedstaden"],["Helsingør","Hovedstaden"],["Herlev","Hovedstaden"],
+  ["Hillerød","Hovedstaden"],["Hvidovre","Hovedstaden"],["Høje-Taastrup","Hovedstaden"],
+  ["Hørsholm","Hovedstaden"],["Ishøj","Hovedstaden"],["København","Hovedstaden"],
+  ["Lyngby-Taarbæk","Hovedstaden"],["Rudersdal","Hovedstaden"],["Rødovre","Hovedstaden"],
+  ["Tårnby","Hovedstaden"],["Vallensbæk","Hovedstaden"]
+].map(([navn,region])=>({
+  id: navn.toLowerCase().replace(/[æå]/g,m=>({'æ':'ae','å':'aa'}[m])).replace(/ø/g,'oe').replace(/[^a-z0-9]+/g,'-'),
+  navn: navn + " Kommune",
+  region
+}));
+
+// De 7 folkerigeste kommuner (Danmarks Statistik, 1. jan. 2026) — vises altid øverst
+const TOP6_IDS = ["koebenhavn","aarhus","aalborg","odense","vejle","esbjerg","randers"];
+
+const STATUS_LABELS = {
+  ikke_startet: "Ikke startet",
+  forhandling: "Forhandler",
+  aftale_indgaaet: "Aftale indgået",
+  vedtaget: "Vedtaget"
+};
+const STATUS_ORDER = ["ikke_startet","forhandling","aftale_indgaaet","vedtaget"];
+
+const STORAGE_KEY = "budgetforhandlinger-data-v1";
+
+// Nyheder om socialområdets udfordringer, kurateret på tværs af klassiske og nichemedier.
+// Opdateres manuelt, når der findes noget nyt og relevant — bump NEWS_VERSION når listen ændres.
+const NEWS_VERSION = "2026-08-31-2";
+let NEWS_ITEMS = [
+  { source: "NB Økonomi", date: "2026-08-11", title: "Hårde budgetvalg og flere økonomiske ubekendte venter mange kommuner i efteråret", url: "https://www.nb-okonomi.dk/2026/08/11/haarde-budgetvalg-og-flere-oekonomiske-ubekendte-venter-mange-kommuner-i-efteraaret" },
+  { source: "Skagensavis (lokalavis)", date: "2026-08-27", title: "Splittet byråd siger ja til budgetforslag — 17 stemte for, 12 imod", url: "https://www.skagensavis.dk/2026/08/27/splittet-byraad-siger-ja-til-budgetforslag-17-stemte-for-12-imod.html" },
+  { source: "DR", date: "2026-08-25", title: "Aarhus-borgmester vil bruge 107 mio. kr. ekstra på personer med handicap og psykisk sygdom", url: "https://www.dr.dk/nyheder/indland/borgmester-vil-bruge-over-100-millioner-ekstra-paa-personer-med-handicap-og-psykisk-sygdom" },
+  { source: "dknyt (regionalt)", date: "2026-08-19", title: "Horsens er i mål med hurtigt budgetforlig — løft af det specialiserede socialområde", url: "https://www.dknyt.dk/artikel/horsens-er-i-maal-med-hurtigt-budgetforlig" },
+  { source: "TV2 ØST", date: "2026-08-17", title: "Byråd skal til at lægge budget — sådan tegner det i din kommune", url: "https://www.tv2east.dk/sjaelland-og-oeerne/byrad-skal-til-at-laegge-budget-sadan-tegner-det-i-din-kommune-992fc" },
+  { source: "NB-Kommune", date: "2026-06-29", title: "Flere kommuner forudser allerede budgetskred på socialområdet", url: "https://www.nb-kommune.dk/2026/06/29/flere-kommuner-forudser-allerede-budgetskred-paa-socialomraadet" },
+  { source: "Altinget Kommunal", date: "2026-05-05", title: "Se kortet: 6 ud af 10 kommuner brugte milliarder mindre på velfærd end planlagt", url: "https://www.altinget.dk/kommunal/artikel/se-kortet-6-ud-af-10-kommuner-brugte-milliarder-mindre-paa-velfaerd-end-planlagt" },
+  { source: "NB Økonomi", date: "2026-04-28", title: "Budgetskred: Udgifterne til det specialiserede socialområde gik over med 3,7 mia. kr.", url: "https://www.nb-okonomi.dk/2026/04/27/udgifterne-til-det-specialiserede-socialomraade-overskrider-budgetterne-med-37-milliarder-kroner" },
+  { source: "Altinget Kommunal", date: "2026-04-28", title: "Se kortet: 79 kommuner bruger knap tre milliarder kroner mere på socialområdet", url: "https://www.altinget.dk/kommunal/artikel/se-kortet-79-kommuner-bruger-knap-tre-milliarder-kroner-mere-paa-socialomraadet" },
+  { source: "Slagelse News (lokalavis)", date: "2026-08-27", title: "Budgetforhandlinger begynder med et borgermøde", url: "https://www.slagelse.info/artikel/hele-kommunen/budgetforhandlinger-begynder-med-et-borgermoede/" }
+];
+const SEED_VERSION_KEY = "budgetforhandlinger-seed-version";
+// Bump denne, hver gang SEED_DATA nedenfor opdateres med ny research —
+// så synkroniseres den friske data automatisk, næste gang siden åbnes.
+const SEED_VERSION = "2026-08-31-16";
+
+// Research pr. 31. august 2026. Datoer for Aarhus, Aalborg og Randers er dels bekræftede,
+// dels et kvalificeret skøn ud fra tidligere års mønster, da den endelige tidsplan for 2027
+// ikke i alle tilfælde er offentliggjort endnu — tjek altid kommunens egen side via linket.
+let SEED_DATA = {
+  koebenhavn: {
+    status: "forhandling",
+    forventetForhandlingsStart: "2026-08-28",
+    forventetAftaleDato: "2026-09-11",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-01",
+    links: [{titel:"Sådan foregår budgetprocessen (kk.dk)", url:"https://www.kk.dk/politik/budget-og-regnskab/budgetproces-og-vedtagelse/saadan-foregaar-budgetprocessen"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  aarhus: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "2026-09-14",
+    forventetAftaleDato: "2026-09-18",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-07",
+    budgetforslagDato: "2026-08-25",
+    budgetforslagLink: {titel:"Borgmester vil bruge over 100 millioner ekstra på personer med handicap og psykisk sygdom (DR)", url:"https://www.dr.dk/nyheder/indland/borgmester-vil-bruge-over-100-millioner-ekstra-paa-personer-med-handicap-og-psykisk-sygdom"},
+    budgetforslagSocialNaevnt: "Borgmester Anders Winnerskjold (S) foreslår en 'socialprocent': alle magistratsafdelinger skal effektivisere for ca. 100 mio. kr. om året, som går til at finde 107 mio. kr. ekstra til borgere med handicap, psykisk sygdom eller alvorlige sociale problemer. Social- og beskæftigelsesrådmand Michael Christensen (LA) kalder det en start, men understreger at det kun lukker en del af det hul, kommunen mangler for at undgå yderligere besparelser.",
+    budgetforslagBeskaeftigelseNaevnt: "Ikke nævnt specifikt i de fundne kilder ud over at forslaget hedder 'social- og beskæftigelsesområdet' som samlet ressort.",
+    socialGenopretningMio: 107,
+    socialGenopretningKilde: "budgetforslag",
+    socialGenopretningNote: "107 mio. kr. foreslået (via en 'socialprocent'-effektivisering på tværs af hele kommunen) til at dække underskuddet på socialområdet. Ifølge social- og beskæftigelsesrådmanden er der stadig et hul på op mod 140 mio. kr. tilbage, selv med disse penge. Dette er borgmesterens udspil — ikke et indgået forlig endnu.",
+    links: [{titel:"Budget 2027 (aarhus.dk)", url:"https://aarhus.dk/demokrati/kommunens-oekonomi/budget/budget-2027"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  aalborg: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "2026-09-17",
+    forventetAftaleDato: "2026-09-25",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-15",
+    links: [{titel:"Budget i Aalborg Kommune", url:"https://www.aalborg.dk/om-kommunen/oekonomi-og-statistik/budget-i-aalborg-kommune/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  odense: {
+    status: "forhandling",
+    forventetForhandlingsStart: "2026-09-16",
+    forventetAftaleDato: "2026-09-17",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-07",
+    links: [{titel:"Budgetproces for 2027 (odense.dk) — inkl. politisk procesplan", url:"https://www.odense.dk/politik/oekonomi-og-effektstyring/budgetter/budgetproces-for-2027"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  vejle: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "2026-09-02",
+    forventetAftaleDato: "2026-09-23",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-09-30",
+    links: [{titel:"Kommunens økonomi (vejle.dk)", url:"https://www.vejle.dk/da/om-os/aabenhed-og-indblik/kommunens-oekonomi/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  esbjerg: {
+    status: "forhandling",
+    forventetForhandlingsStart: "2026-09-08",
+    forventetAftaleDato: "2026-09-11",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-05",
+    budgetforslagDato: "2026-08-17",
+    budgetforslagLink: {titel:"Kataloger til Forhandlingsudvalget – budgetforslag 2027-2030 (esbjerg.dk)", url:"https://www.esbjerg.dk/om-kommunen/kommunens-oekonomi/kommunens-budget/kataloger-til-forhandlingsudvalget"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Sådan foregår budgetprocessen (esbjerg.dk) — bekræftet tidsplan for 2026/27", url:"https://www.esbjerg.dk/om-kommunen/kommunens-oekonomi/kommunens-budget/budgetprocessen"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  randers: {
+    status: "forhandling",
+    forventetForhandlingsStart: "2026-09-17",
+    forventetAftaleDato: "2026-09-24",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    budgetforslagDato: "2026-08-26",
+    budgetforslagLink: {titel:"Direktionens budgetforslag 2027-2030 (randers.dk)", url:"https://www.randers.dk/demokrati/hoeringer-og-afgoerelser/budget-2026-2029/"},
+    budgetforslagSocialNaevnt: "Budgetforslaget (basisbudgettet) tager udgangspunkt i sidste års vedtagne budget og indregner en ubalance på socialområdet på gennemsnitligt ca. 65 mio. kr. årligt i tidligere års forslag — svarende tal for 2027-forslaget er endnu ikke gennemgået i detaljer.",
+    budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budget 2027-2030, høring og budgetproces (randers.dk)", url:"https://www.randers.dk/demokrati/hoeringer-og-afgoerelser/budget-2026-2029/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+
+  // --- Øvrige kommuner, tilføjet via Research 31. august 2026 ---
+  frederikshavn: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-07",
+    budgetforslagDato: "2026-08-26",
+    budgetforslagLink: {titel:"Kommunens økonomi (frederikshavn.dk) — 1. behandling 26. aug.", url:"https://frederikshavn.dk/politik-og-indflydelse/kommunens-oekonomi"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Kommunens økonomi (frederikshavn.dk)", url:"https://frederikshavn.dk/politik-og-indflydelse/kommunens-oekonomi"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  mariagerfjord: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    budgetforslagDato: "2026-09-17",
+    budgetforslagLink: {titel:"Mariagerfjord Kommune – budgetside — 1. behandling 17. sep.", url:"https://www.mariagerfjord.dk/"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Mariagerfjord Kommune – budgetside", url:"https://www.mariagerfjord.dk/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  horsens: {
+    status: "aftale_indgaaet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "2026-08-19",
+    aftaleDato: "2026-08-19",
+    vedtagelsesDato: "",
+    links: [
+      {titel:"Horsens er i mål med hurtigt budgetforlig (DK Nyt)", url:"https://www.dknyt.dk/artikel/horsens-er-i-maal-med-hurtigt-budgetforlig"},
+      {titel:"Horsens Kommune – økonomi og budget", url:"https://www.horsens.dk/"}
+    ],
+    resumeSocial: "Ifølge DK Nyt (19. aug 2026) står årets første budgetforlig \"især på et løft af det specialiserede socialområde\". Hele byrådet står bag aftalen. Fuld aftaletekst er endnu ikke gennemgået i detaljer.",
+    resumeBeskaeftigelse: "Ikke specificeret i de fundne kilder.",
+    sidstOpdateret: new Date().toISOString()
+  },
+  silkeborg: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "2026-09-17",
+    aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    budgetforslagDato: "2026-08-25",
+    budgetforslagLink: {titel:"Budgetforslag 2027-2030 er nu i høring (silkeborg.dk) — 1. behandling 25. aug.", url:"https://silkeborg.dk/nyheder/budgetforslag-2027-2030-er-nu-i-hoering"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budgetforslag 2027-2030 er nu i høring (silkeborg.dk)", url:"https://silkeborg.dk/nyheder/budgetforslag-2027-2030-er-nu-i-hoering"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  skanderborg: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-09-30",
+    links: [{titel:"Aktuelt om Budget 2027-2030 (skanderborg.dk)", url:"https://www.skanderborg.dk/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  syddjurs: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Budget 2027 (syddjurs.dk)", url:"https://www.syddjurs.dk/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  viborg: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    budgetforslagDato: "2026-09-07",
+    budgetforslagLink: {titel:"Viborg Kommune – økonomi (budgetkonference 7.-8. sep.)", url:"https://viborg.dk/demokrati-og-indflydelse/oekonomi"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Viborg Kommune – økonomi", url:"https://viborg.dk/demokrati-og-indflydelse/oekonomi"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  "ringkoebing-skjern": {
+    status: "aftale_indgaaet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "2026-08-28",
+    aftaleDato: "2026-08-28",
+    vedtagelsesDato: "",
+    links: [{titel:"Bred aftale om budget for 2027 – men mørke skyer forude (rksk.dk)", url:"https://www.rksk.dk/nyheder/kommunen/2026/august/bred-aftale-om-budget-for-2027-men-moerke-skyer-forude"}],
+    resumeSocial: "7 ud af 8 partier (alle undtagen Danmarksdemokraterne) står bag aftalen. Handicap- og psykiatriområdet (det specialiserede voksenområde) tilføres 97 mio. kr. oven i de 80 mio. kr., der allerede var afsat sidste år — og tidligere besluttede servicereduktioner på området bliver ikke gennemført. Der afsættes 1 mio. kr. til Headspace til psykisk sårbare unge. På ældreområdet udvides daghjemskapaciteten til demensramte (3 pladser i Tarm, 5 i Skjern), og plejeboligområdet får tilbageført 3,8 mio. kr. Der afsættes desuden midler til socialrådgivere på skoler og dagtilbud til tidlig, forebyggende indsats, samt en udvidelse af tilskuddet til pasning af eget barn.",
+    resumeBeskaeftigelse: "Ikke omtalt specifikt i kommunens pressemeddelelse om aftalen.",
+    socialGenopretningMio: 97,
+    socialGenopretningKilde: "forlig",
+    socialGenopretningNote: "97 mio. kr. tilført det specialiserede voksenområde (handicap/psykiatri) for at dække udgiftspresset og undgå tidligere planlagte servicereduktioner. Kommer oven i 80 mio. kr. afsat sidste år.",
+    sidstOpdateret: new Date().toISOString()
+  },
+  fredericia: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-05",
+    budgetforslagDato: "2026-09-07",
+    budgetforslagLink: {titel:"Budgetlægning 2027-2030 (fredericia.dk) — 1. behandling 7. sep.", url:"https://www.fredericia.dk/da/politik/budget-regnskab/budgetlaegning-2027-2030"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budgetlægning 2027-2030 (fredericia.dk)", url:"https://www.fredericia.dk/da/politik/budget-regnskab/budgetlaegning-2027-2030"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  kerteminde: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-01",
+    links: [{titel:"Budget (kerteminde.dk)", url:"https://kerteminde.dk/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  kolding: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Kolding Kommune – økonomi", url:"https://www.kolding.dk/om-kommunen/oekonomi"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  toender: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Budget (toender.dk)", url:"https://www.toender.dk/din-kommune/oekonomi/budget"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  varde: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    budgetforslagDato: "2026-09-10",
+    budgetforslagLink: {titel:"Varde Kommune – budget (budgetseminar 10.-11. sep.)", url:"https://vardekommune.dk/"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Varde Kommune – budget", url:"https://vardekommune.dk/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  greve: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-05",
+    budgetforslagDato: "2026-09-07",
+    budgetforslagLink: {titel:"Greve Kommune – mødekalender (uverificeret 1. behandling 7. sep.)", url:"https://greve.dk/"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Greve Kommune – mødekalender", url:"https://greve.dk/"}],
+    resumeSocial: "Datoer bør verificeres direkte i mødekalenderen — kilden angav ikke eksplicit, at møderne er budgetbehandlinger.",
+    resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  guldborgsund: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    budgetforslagDato: "2026-09-17",
+    budgetforslagLink: {titel:"Guldborgsund Kommune – økonomi — 1. behandling 17. sep.", url:"https://www.guldborgsund.dk/om-kommunen/oekonomi"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Guldborgsund Kommune – økonomi", url:"https://www.guldborgsund.dk/om-kommunen/oekonomi"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  holbaek: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-07",
+    budgetforslagDato: "2026-08-31",
+    budgetforslagLink: {titel:"Budget (holbaek.dk) — ØU 1. behandling 31. aug.", url:"https://holbaek.dk/budget"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budget (holbaek.dk)", url:"https://holbaek.dk/budget"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  lolland: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    links: [{titel:"Budget 2027: Budgetpakker offentliggjort (lolland.dk)", url:"https://www.lolland.dk/om-kommunen/presse-og-kommunikation/nyheder/budget-2027-budgetpakker-offentliggjort"}],
+    resumeSocial: "Kommunen oplyser selv, at der mangler mere end 500 mio. kr. for at få budgettet til at gå op; der er fremlagt store spareforslag, bl.a. samling af tilbud, administration og digitalisering. Intet forlig indgået endnu.",
+    resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  naestved: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-06",
+    budgetforslagDato: "2026-08-20",
+    budgetforslagLink: {titel:"Budget 2027 (naestved.dk) — budgetseminar 20. aug.", url:"https://naestved.dk/kommunen/oekonomi/budget/budget-2027"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budget 2027 (naestved.dk)", url:"https://naestved.dk/kommunen/oekonomi/budget/budget-2027"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  ringsted: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [],
+    resumeSocial: "Kommunen skal ifølge DR Sjælland (29. jan 2026) finde 55 mio. kr. i budget 2027 — bl.a. pga. faldende indbyggertal efter Danish Crowns lukning i 2024 samt stigende udgifter på det specialiserede socialområde. Intet forlig indgået endnu.",
+    resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  roskilde: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Budget (roskilde.dk)", url:"https://roskilde.dk/da-dk/om-kommunen/okonomi/budget"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  slagelse: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-06",
+    budgetforslagDato: "2026-09-08",
+    budgetforslagLink: {titel:"Budget og regnskab (slagelse.dk) — uverificeret 1. behandling 8. sep.", url:"https://slagelse.dk/da/om-kommunen/okonomi-og-priser/budget-og-regnskab"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budget og regnskab (slagelse.dk)", url:"https://slagelse.dk/da/om-kommunen/okonomi-og-priser/budget-og-regnskab"}],
+    resumeSocial: "Datoer bør verificeres – ikke fuldt bekræftet i de fundne kilder.",
+    resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  ballerup: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-06",
+    links: [{titel:"Budgetter (ballerup.dk)", url:"https://ballerup.dk/om-kommunen/oekonomi-budgetter/budgetter"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  bornholm: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    links: [{titel:"Budget (bornholm.dk)", url:"https://bornholm.dk/politik-demokrati-og-indflydelse/oekonomi/budget"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  broendby: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Høring om budget 2027 (brondby.dk)", url:"https://www.brondby.dk/politik-deltagelse/horinger-tilladelser-og-dispensationer/horing-om-budget-2027"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  egedal: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Egedal Kommune – økonomi", url:"https://www.egedalkommune.dk/om-kommunen/oekonomi"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  fredensborg: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  frederikssund: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-07",
+    links: [{titel:"Kommunens økonomi (frederikssund.dk)", url:"https://www.frederikssund.dk/kommunen/oekonomi"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  gentofte: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Gentofte Kommune", url:"https://gentofte.dk/"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  gladsaxe: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-07",
+    links: [{titel:"Budget og regnskab (gladsaxe.dk)", url:"https://gladsaxe.dk/kommunen/oekonomi/budget-og-regnskab"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  "hoeje-taastrup": {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "",
+    vedtagelsesDato: "2026-10-08",
+    budgetforslagDato: "2026-09-10",
+    budgetforslagLink: {titel:"Budget og regnskab (htk.dk) — 1. behandling 10. sep.", url:"https://www.htk.dk/politik/budget-og-regnskab"},
+    budgetforslagSocialNaevnt: "", budgetforslagBeskaeftigelseNaevnt: "",
+    links: [{titel:"Budget og regnskab (htk.dk)", url:"https://www.htk.dk/politik/budget-og-regnskab"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  rudersdal: {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Budget (rudersdal.dk)", url:"https://rudersdal.dk/politik-og-indflydelse/politik-og-udvalg/budget"}],
+    resumeSocial: "", resumeBeskaeftigelse: "", sidstOpdateret: new Date().toISOString()
+  },
+  roedovre: {
+    status: "forhandling",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "", aftaleDato: "", vedtagelsesDato: "",
+    links: [{titel:"Budgetforslag 2027: Rødovre holder fast i velfærden (rk.dk)", url:"https://rk.dk/service-og-pressemeddelelser/service-og-pressemeddelelser-2026/budgetforslag-2027"}],
+    resumeSocial: "Budgetforslaget (ikke forlig) indeholder besparelser/effektiviseringer på ca. 27 mio. kr., primært drevet af udgifter til fordrevne ukrainere. Det specialiserede socialområde løftes med 64 mio. kr. årligt fra 2027 for at følge det stigende udgiftsbehov. Intet forlig indgået endnu.",
+    resumeBeskaeftigelse: "",
+    socialGenopretningMio: 64,
+    socialGenopretningKilde: "budgetforslag",
+    socialGenopretningNote: "64 mio. kr. årligt fra 2027 foreslået til det specialiserede socialområde for at følge det stigende udgiftsbehov. Dette er forvaltningens forslag — ikke et indgået forlig, og tallet kan ændre sig i forhandlingerne.",
+    sidstOpdateret: new Date().toISOString()
+  }
+};
+
+let state = {}; // id -> record
+let lastUpdated = "2026-08-31";
+let filters = { region: "Alle", status: "Alle", search: "" };
+let sortBy = "aktualitet"; // "aktualitet" eller et kolonnenavn
+let sortDir = "asc";
+let openId = null;
+let breakdownOpen = false;
+
+// Rangerer en kommune efter hvor "aktuel" den er lige nu:
+// aftale indgået (landet, men ikke endeligt vedtaget) > vedtaget > forhandling i gang > nærmer sig forhandlingsstart > ukendt
+function stageInfo(r){
+  if(r.status==="aftale_indgaaet") return {rank:0, key:r.aftaleDato||"0000-00-00"};
+  if(r.status==="vedtaget") return {rank:1, key:r.vedtagelsesDato||"0000-00-00"};
+  if(r.status==="forhandling") return {rank:2, key:r.forventetAftaleDato||"9999-99-99"};
+  if(r.status==="ikke_startet"){
+    if(r.forventetForhandlingsStart) return {rank:3, key:r.forventetForhandlingsStart};
+    return {rank:4, key:"9999-99-99"};
+  }
+  return {rank:5, key:"9999-99-99"};
+}
+
+function aktualitetCompare(a,b){
+  const ia = stageInfo(getRecord(a.id)), ib = stageInfo(getRecord(b.id));
+  if(ia.rank!==ib.rank) return ia.rank-ib.rank;
+  if(ia.rank===0 || ia.rank===1){ // aftale indgået / vedtaget: nyeste dato øverst
+    if(ia.key!==ib.key) return ia.key>ib.key?-1:1;
+  } else {
+    if(ia.key!==ib.key) return ia.key<ib.key?-1:1;
+  }
+  return a.navn.localeCompare(b.navn,'da');
+}
+
+function columnCompare(a,b){
+  const ra = getRecord(a.id), rb = getRecord(b.id);
+  let va, vb;
+  if(sortBy==="navn"){ va=a.navn; vb=b.navn; }
+  else if(sortBy==="region"){ va=a.region; vb=b.region; }
+  else if(sortBy==="status"){ va=STATUS_ORDER.indexOf(ra.status); vb=STATUS_ORDER.indexOf(rb.status); }
+  else { va = ra[sortBy]||"9999-99-99"; vb = rb[sortBy]||"9999-99-99"; }
+  if(va<vb) return sortDir==="asc"?-1:1;
+  if(va>vb) return sortDir==="asc"?1:-1;
+  return a.navn.localeCompare(b.navn,'da');
+}
+
+function applySort(list){
+  const sorted = [...list];
+  sorted.sort(sortBy==="aktualitet" ? aktualitetCompare : columnCompare);
+  return sorted;
+}
+
+function emptyRecord(){
+  return {
+    status: "ikke_startet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "",
+    aftaleDato: "",
+    vedtagelsesDato: "",
+    budgetforslagDato: "",
+    budgetforslagLink: null,
+    budgetforslagSocialNaevnt: "",
+    budgetforslagBeskaeftigelseNaevnt: "",
+    links: [],
+    resumeSocial: "",
+    resumeBeskaeftigelse: "",
+    // Penge tilført SPECIFIKT for at dæmme op for underskud/udgiftspres på socialområdet
+    // (genopretning/håndtering af hullet) — IKKE nye indsatser eller udvidelser.
+    socialGenopretningMio: null,
+    socialGenopretningKilde: "", // "forlig" eller "budgetforslag"
+    socialGenopretningNote: "",
+    sidstOpdateret: ""
+  };
+}
+
+function getRecord(id){
+  const raw = state[id] || emptyRecord();
+  return { ...raw, status: computeEffectiveStatus(raw) };
+}
+
+// Beregner den reelle status ud fra dagens dato holdt op mod de kendte tidspunkter —
+// ikke bare om en dato findes, men om vi faktisk er nået til den endnu.
+function computeEffectiveStatus(r){
+  // Bekræftede kendsgerninger (forlig landet / vedtaget) overskrives aldrig af datologik.
+  if(r.status === "aftale_indgaaet" || r.status === "vedtaget") return r.status;
+
+  if(r.status === "forhandling"){
+    const today = new Date(); today.setHours(0,0,0,0);
+    // Ingen kendt forhandlingsstart-dato → vi kan reelt ikke sige, at forhandlingerne er i gang.
+    if(!r.forventetForhandlingsStart) return "ikke_startet";
+    const start = new Date(r.forventetForhandlingsStart+"T00:00:00");
+    if(today < start) return "ikke_startet";
+    return "forhandling";
+  }
+
+  return r.status;
+}
+
+async function loadData(){
+  // Hent den nyeste data fra data.json, hvis den findes ved siden af denne fil.
+  // Fejler dette (fx hvis filen mangler, eller siden åbnes lokalt uden webserver),
+  // falder vi automatisk tilbage til den indbyggede data herover.
+  try{
+    const resp = await fetch('./data.json', { cache: "no-store" });
+    if(resp.ok){
+      const json = await resp.json();
+      if(json.SEED_DATA) SEED_DATA = json.SEED_DATA;
+      if(json.NEWS_ITEMS) NEWS_ITEMS = json.NEWS_ITEMS;
+      if(json.lastUpdated) lastUpdated = json.lastUpdated;
+    }
+  }catch(e){
+    // Ingen data.json tilgængelig — bruger den indbyggede fallback-data i stedet.
+  }
+
+  try{
+    const res = await window.storage.get(STORAGE_KEY, false);
+    state = res && res.value ? JSON.parse(res.value) : {};
+  }catch(e){
+    state = {};
+  }
+
+  let storedVersion = null;
+  try{
+    const vRes = await window.storage.get(SEED_VERSION_KEY, false);
+    storedVersion = vRes ? vRes.value : null;
+  }catch(e){ storedVersion = null; }
+
+  let changed = false;
+  if(storedVersion !== SEED_VERSION){
+    // Ny research er tilgængelig — synkroniser SEED_DATA ind (overskriver kun de kommuner, vi selv researcher).
+    Object.keys(SEED_DATA).forEach(id=>{
+      state[id] = { ...emptyRecord(), ...SEED_DATA[id] };
+    });
+    changed = true;
+  }
+  if(changed){
+    await persist();
+    try{ await window.storage.set(SEED_VERSION_KEY, SEED_VERSION, false); }catch(e){}
+  }
+  render();
+}
+
+async function persist(){
+  try{
+    await window.storage.set(STORAGE_KEY, JSON.stringify(state), false);
+  }catch(e){
+    console.error("Kunne ikke gemme", e);
+  }
+}
+
+function daysUntil(dateStr){
+  if(!dateStr) return null;
+  const d = new Date(dateStr+"T00:00:00");
+  const now = new Date();
+  now.setHours(0,0,0,0);
+  return Math.round((d-now)/86400000);
+}
+
+function fmtDate(dateStr){
+  if(!dateStr) return "";
+  const d = new Date(dateStr+"T00:00:00");
+  return d.toLocaleDateString('da-DK', {day:'numeric', month:'short'});
+}
+
+function fmtDateLong(dateStr){
+  if(!dateStr) return "";
+  const d = new Date(dateStr+"T00:00:00");
+  return d.toLocaleDateString('da-DK', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+}
+
+function escapeHtml(s){
+  return (s||"").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function computeGenopretning(){
+  let total = 0;
+  let kommunerMedTal = 0;
+  let kommunerBehandlet = 0;
+  KOMMUNER.forEach(k=>{
+    const r = state[k.id];
+    if(r){
+      kommunerBehandlet++;
+      if(typeof r.socialGenopretningMio === "number"){
+        total += r.socialGenopretningMio;
+        kommunerMedTal++;
+      }
+    }
+  });
+  return { total, kommunerMedTal, kommunerBehandlet };
+}
+
+function computeStats(){
+  const counts = {ikke_startet:0, forhandling:0, aftale_indgaaet:0, vedtaget:0};
+  KOMMUNER.forEach(k=>{
+    const r = getRecord(k.id);
+    counts[r.status] = (counts[r.status]||0)+1;
+  });
+  return counts;
+}
+
+function getFiltered(){
+  return KOMMUNER.filter(k=>{
+    if(filters.region!=="Alle" && k.region!==filters.region) return false;
+    const r = getRecord(k.id);
+    if(filters.status!=="Alle" && r.status!==filters.status) return false;
+    if(filters.search && !k.navn.toLowerCase().includes(filters.search.toLowerCase())) return false;
+    return true;
+  });
+}
+
+function getGroups(){
+  const filtered = getFiltered();
+  const top = applySort(filtered.filter(k=>TOP6_IDS.includes(k.id)));
+  const rest = applySort(filtered.filter(k=>!TOP6_IDS.includes(k.id)));
+  return {top, rest};
+}
+
+function setSort(col){
+  if(sortBy===col){ sortDir = sortDir==="asc"?"desc":"asc"; }
+  else { sortBy=col; sortDir="asc"; }
+  render();
+}
+
+function isSoon(dateStr, days){
+  const left = daysUntil(dateStr);
+  return left !== null && left >= 0 && left <= days;
+}
+
+function renderRows(list){
+  return list.map(k=>{
+    const r = getRecord(k.id);
+    const soon = r.status!=="vedtaget" && r.status!=="aftale_indgaaet" && isSoon(r.forventetAftaleDato, 14);
+    const startSoon = isSoon(r.forventetForhandlingsStart, 14);
+    return `
+      <tr data-id="${k.id}">
+        <td>${k.navn}</td>
+        <td class="region">${k.region}</td>
+        <td><span class="badge ${r.status}"><span class="dot"></span>${STATUS_LABELS[r.status]}</span></td>
+        <td class="${startSoon?'soon':(!r.forventetForhandlingsStart?'empty-cell':'')}">${r.forventetForhandlingsStart?fmtDate(r.forventetForhandlingsStart)+(startSoon?' · snart':''):'—'}</td>
+        <td class="${soon?'soon':(!r.forventetAftaleDato?'empty-cell':'')}">${r.forventetAftaleDato?fmtDate(r.forventetAftaleDato)+(soon?' · snart':''):'—'}</td>
+        <td class="${!r.aftaleDato?'empty-cell':''}">${r.aftaleDato?fmtDate(r.aftaleDato):'—'}</td>
+        <td class="${!r.vedtagelsesDato?'empty-cell':''}">${r.vedtagelsesDato?fmtDate(r.vedtagelsesDato):'—'}</td>
+        <td class="doc-count">${r.links.length ? r.links.length+' dok.' : '—'}</td>
+        <td class="doc-count">${r.sidstOpdateret ? fmtDate(r.sidstOpdateret.slice(0,10)) : '—'}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function headRow(){
+  const arrow = (col)=> sortBy===col ? (sortDir==='asc'?' ↑':' ↓') : '';
+  return `
+    <tr>
+      <th data-col="navn">Kommune${arrow('navn')}</th>
+      <th data-col="region">Region${arrow('region')}</th>
+      <th data-col="status">Status${arrow('status')}</th>
+      <th data-col="forventetForhandlingsStart">Forventet start${arrow('forventetForhandlingsStart')}</th>
+      <th data-col="forventetAftaleDato">Forventet aftale${arrow('forventetAftaleDato')}</th>
+      <th data-col="aftaleDato">Aftale landet${arrow('aftaleDato')}</th>
+      <th data-col="vedtagelsesDato">Vedtaget${arrow('vedtagelsesDato')}</th>
+      <th>Dokumenter</th>
+      <th>Opdateret</th>
+    </tr>
+  `;
+}
+function emptyRow(){
+  return `<tr><td colspan="9" class="empty-cell" style="padding:16px 12px;">Ingen kommuner matcher filtrene.</td></tr>`;
+}
+
+function render(){
+  const root = document.getElementById('root');
+  const stats = computeStats();
+  const genopretning = computeGenopretning();
+  const { top, rest } = getGroups();
+  const totalShown = top.length + rest.length;
+
+  root.innerHTML = `
+    <header class="top">
+      <div>
+        <h1>Kommunale budgetforhandlinger</h1>
+        <p>Overblik over status, datoer og dokumenter for budgetforhandlingerne i alle 98 kommuner.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+        <div class="budget-year">Budget 2027</div>
+        ${lastUpdated ? `<div class="last-updated-badge">🕓 Sidst opdateret ${fmtDateLong(lastUpdated)}</div>` : ''}
+      </div>
+    </header>
+
+    <div class="gap-hero">
+      <div class="gap-hero-icon">🩹</div>
+      <div class="gap-hero-main">
+        <div class="gap-hero-num-row">
+          <div class="gap-hero-num">${genopretning.total.toLocaleString('da-DK')} <span class="gap-hero-unit">mio. kr.</span></div>
+          <span class="gap-hero-badge">Foreløbigt</span>
+        </div>
+        <div class="gap-hero-label">tilført for at dække underskuddet/udgiftspresset på <strong>socialområdet</strong> på tværs af kommunerne</div>
+        <button class="gap-hero-breakdown-btn" id="breakdownBtn">Se hvad tallet består af →</button>
+      </div>
+    </div>
+
+    <div class="news-bar">
+      <div class="news-bar-label">Seneste om socialområdets udfordringer</div>
+      <div class="news-scroll">
+        ${[...NEWS_ITEMS].sort((a,b)=> b.date.localeCompare(a.date)).map(n => `
+          <a class="news-card" href="${escapeHtml(n.url)}" target="_blank" rel="noopener">
+            <div class="news-source">${escapeHtml(n.source)}</div>
+            <div class="news-title">${escapeHtml(n.title)}</div>
+            <div class="news-date">${fmtDate(n.date)}</div>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="news-bar">
+      <div class="news-bar-label">Seneste indgåede budgetforlig</div>
+      <div class="news-scroll">
+        ${(() => {
+          const landed = KOMMUNER
+            .map(k => ({ k, r: state[k.id] }))
+            .filter(x => x.r && x.r.aftaleDato)
+            .sort((a,b) => b.r.aftaleDato.localeCompare(a.r.aftaleDato));
+          if(!landed.length) return `<div class="news-card" style="cursor:default;"><div class="news-source">Endnu ingen</div><div class="news-title">Ingen forlig er registreret som landet endnu.</div></div>`;
+          return landed.map(({k,r}) => {
+            const link = r.links && r.links[0];
+            const inner = `
+              <div class="news-source">${escapeHtml(k.region)}</div>
+              <div class="news-title">${escapeHtml(k.navn)} — budgetforlig landet</div>
+              <div class="news-date">${fmtDate(r.aftaleDato)}</div>
+            `;
+            return link
+              ? `<a class="news-card" href="${escapeHtml(link.url)}" target="_blank" rel="noopener">${inner}</a>`
+              : `<div class="news-card" style="cursor:default;">${inner}</div>`;
+          }).join('');
+        })()}
+      </div>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat"><div class="num">${stats.ikke_startet}</div><div class="label">Ikke startet</div></div>
+      <div class="stat"><div class="num">${stats.forhandling}</div><div class="label">Forhandler</div></div>
+      <div class="stat"><div class="num">${stats.aftale_indgaaet}</div><div class="label">Aftale indgået</div></div>
+      <div class="stat"><div class="num">${stats.vedtaget}</div><div class="label">Vedtaget</div></div>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Søg efter kommune…" value="${escapeHtml(filters.search)}">
+      <select id="statusFilter">
+        <option value="Alle">Alle statusser</option>
+        ${STATUS_ORDER.map(s=>`<option value="${s}" ${filters.status===s?'selected':''}>${STATUS_LABELS[s]}</option>`).join('')}
+      </select>
+      <div class="chip sort-chip ${sortBy==='aktualitet'?'active':''}" id="aktualitetChip">Sorter: mest aktuel</div>
+    </div>
+    <div class="chip-row" id="regionChips" style="margin-bottom:16px;">
+      ${["Alle",...REGIONS].map(r=>`<div class="chip ${filters.region===r?'active':''}" data-region="${r}">${r}</div>`).join('')}
+    </div>
+
+    <h3 class="section-title">De 7 største kommuner</h3>
+    <table>
+      <thead>${headRow()}</thead>
+      <tbody id="tbody-top">${renderRows(top) || emptyRow()}</tbody>
+    </table>
+
+    <h3 class="section-title" style="margin-top:22px;">Øvrige kommuner</h3>
+    <table>
+      <thead>${headRow()}</thead>
+      <tbody id="tbody-rest">${renderRows(rest) || emptyRow()}</tbody>
+    </table>
+
+    <footer class="appfoot">${totalShown} af 98 kommuner vist.</footer>
+  `;
+
+  // Bind events
+  document.getElementById('search').addEventListener('input', e=>{
+    filters.search = e.target.value;
+    render();
+    document.getElementById('search').focus();
+    const val = document.getElementById('search').value;
+    document.getElementById('search').setSelectionRange(val.length,val.length);
+  });
+  document.getElementById('statusFilter').addEventListener('change', e=>{
+    filters.status = e.target.value; render();
+  });
+  document.querySelectorAll('#regionChips .chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{ filters.region = chip.dataset.region; render(); });
+  });
+  document.getElementById('aktualitetChip').addEventListener('click', ()=>{
+    sortBy = "aktualitet"; sortDir = "asc"; render();
+  });
+  document.querySelectorAll('thead th[data-col]').forEach(th=>{
+    th.addEventListener('click', ()=> setSort(th.dataset.col));
+  });
+  document.querySelectorAll('#tbody-top tr[data-id], #tbody-rest tr[data-id]').forEach(tr=>{
+    tr.addEventListener('click', ()=>{ openId = tr.dataset.id; renderModal(); });
+  });
+  document.getElementById('breakdownBtn').addEventListener('click', ()=>{
+    breakdownOpen = true; renderBreakdown();
+  });
+
+  renderModal();
+  renderBreakdown();
+}
+
+function renderModal(){
+  let overlay = document.getElementById('overlay');
+  if(overlay) overlay.remove();
+  if(!openId) return;
+
+  const k = KOMMUNER.find(x=>x.id===openId);
+  const r = { ...emptyRecord(), ...getRecord(openId) };
+
+  const dateLine = (label, val) => `
+    <div class="brief-row">
+      <span class="brief-label">${label}</span>
+      <span class="brief-value ${!val?'empty-cell':''}">${val ? fmtDateLong(val) : 'Ikke oplyst endnu'}</span>
+    </div>`;
+
+  overlay = document.createElement('div');
+  overlay.id = 'overlay';
+  overlay.className = 'overlay';
+  overlay.innerHTML = `
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h2>${k.navn}</h2>
+          <div class="region-tag">${k.region} · <span class="badge ${r.status}"><span class="dot"></span>${STATUS_LABELS[r.status]}</span></div>
+        </div>
+        <button class="close-btn" id="closeModal">&times;</button>
+      </div>
+
+      <div class="brief-dates">
+        ${dateLine("Forventet forhandlingsstart", r.forventetForhandlingsStart)}
+        ${dateLine("Forventet aftale", r.forventetAftaleDato)}
+        ${dateLine("Aftale landet", r.aftaleDato)}
+        ${dateLine("Vedtaget i byrådet", r.vedtagelsesDato)}
+      </div>
+
+      ${r.budgetforslagDato || r.budgetforslagLink ? `
+      <div class="proposal-box">
+        <div class="proposal-box-head">
+          <span class="proposal-icon">📄</span>
+          <div>
+            <div class="proposal-title">Direktionens/forvaltningens budgetforslag <span class="kilde-tag">Kilde: budgetforslag</span></div>
+            <div class="proposal-date">${r.budgetforslagDato ? 'Fremlagt ' + fmtDateLong(r.budgetforslagDato) : 'Dato ikke oplyst'}</div>
+          </div>
+        </div>
+        ${r.budgetforslagLink ? `<div class="proposal-link">→ <a href="${escapeHtml(r.budgetforslagLink.url)}" target="_blank" rel="noopener">${escapeHtml(r.budgetforslagLink.titel)}</a></div>` : ''}
+        ${r.budgetforslagSocialNaevnt ? `<div class="proposal-flag"><strong>Socialområdet nævnt:</strong> ${escapeHtml(r.budgetforslagSocialNaevnt)}</div>` : ''}
+        ${r.budgetforslagBeskaeftigelseNaevnt ? `<div class="proposal-flag"><strong>Beskæftigelsesområdet nævnt:</strong> ${escapeHtml(r.budgetforslagBeskaeftigelseNaevnt)}</div>` : ''}
+        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "budgetforslag") ? `
+          <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> foreslået til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span></div>
+        ` : ''}
+      </div>
+      ` : ''}
+
+      <div class="brief-section">
+        <h3>Socialområdet <span class="kilde-tag">${r.resumeSocial ? 'Kilde: forlig' : ''}</span></h3>
+        <p class="${!r.resumeSocial?'empty-cell':''}">${r.resumeSocial ? escapeHtml(r.resumeSocial) : 'Ingen aftale landet endnu — opdateres når forhandlingerne er afsluttet.'}</p>
+        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "forlig") ? `
+          <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> tilført til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span></div>
+        ` : ''}
+      </div>
+      <div class="brief-section">
+        <h3>Beskæftigelsesområdet <span class="kilde-tag">${r.resumeBeskaeftigelse ? 'Kilde: forlig' : ''}</span></h3>
+        <p class="${!r.resumeBeskaeftigelse?'empty-cell':''}">${r.resumeBeskaeftigelse ? escapeHtml(r.resumeBeskaeftigelse) : 'Ingen aftale landet endnu — opdateres når forhandlingerne er afsluttet.'}</p>
+      </div>
+
+      <div class="brief-section">
+        <h3>Dokumenter</h3>
+        ${r.links.length ? `<div class="doc-links">${r.links.map(l=>`<div>→ <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.titel || l.url)}</a></div>`).join('')}</div>` : `<p class="empty-cell">Ingen dokumenter registreret endnu.</p>`}
+      </div>
+
+      <div class="modal-footer">
+        <span class="updated-at">${r.sidstOpdateret ? 'Sidst opdateret ' + fmtDateLong(r.sidstOpdateret.slice(0,10)) : 'Ikke opdateret endnu'}</span>
+        <button class="close-btn-text" id="closeModal2">Luk</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  overlay.querySelector('#closeModal').addEventListener('click', ()=>{ openId=null; renderModal(); });
+  overlay.querySelector('#closeModal2').addEventListener('click', ()=>{ openId=null; renderModal(); });
+  overlay.addEventListener('click', e=>{ if(e.target===overlay){ openId=null; renderModal(); } });
+}
+
+function renderBreakdown(){
+  let overlay = document.getElementById('breakdownOverlay');
+  if(overlay) overlay.remove();
+  if(!breakdownOpen) return;
+
+  const rows = KOMMUNER
+    .map(k=>({ k, r: state[k.id] }))
+    .filter(x => x.r && typeof x.r.socialGenopretningMio === "number")
+    .sort((a,b)=> b.r.socialGenopretningMio - a.r.socialGenopretningMio);
+
+  const total = rows.reduce((s,x)=> s + x.r.socialGenopretningMio, 0);
+
+  overlay = document.createElement('div');
+  overlay.id = 'breakdownOverlay';
+  overlay.className = 'overlay';
+  overlay.innerHTML = `
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h2>Hvad består tallet af?</h2>
+          <div class="region-tag">${total.toLocaleString('da-DK')} mio. kr. fordelt på ${rows.length} kommune${rows.length===1?'':'r'} — foreløbigt, opdateres løbende</div>
+        </div>
+        <button class="close-btn" id="closeBreakdown">&times;</button>
+      </div>
+
+      <div style="margin-top:14px;">
+        ${rows.length ? rows.map(({k,r})=>`
+          <div class="breakdown-row">
+            <div>
+              <div class="breakdown-kommune">${k.navn} <span class="kilde-tag">${r.socialGenopretningKilde === 'forlig' ? 'Kilde: forlig' : 'Kilde: budgetforslag'}</span></div>
+              <div class="breakdown-note">${escapeHtml(r.socialGenopretningNote || '')}</div>
+            </div>
+            <div class="breakdown-amount">${r.socialGenopretningMio}<span class="unit"> mio. kr.</span></div>
+          </div>
+        `).join('') : `<p class="empty-cell">Ingen kommuner med et konkret tal endnu.</p>`}
+      </div>
+
+      <div class="modal-footer">
+        <span class="updated-at">Tallet er foreløbigt og vokser i takt med, at flere kommuners forlig og budgetforslag gennemgås.</span>
+        <button class="close-btn-text" id="closeBreakdown2">Luk</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  overlay.querySelector('#closeBreakdown').addEventListener('click', ()=>{ breakdownOpen=false; renderBreakdown(); });
+  overlay.querySelector('#closeBreakdown2').addEventListener('click', ()=>{ breakdownOpen=false; renderBreakdown(); });
+  overlay.addEventListener('click', e=>{ if(e.target===overlay){ breakdownOpen=false; renderBreakdown(); } });
+}
+
+loadData();
+</script>
+</body>
+</html>
