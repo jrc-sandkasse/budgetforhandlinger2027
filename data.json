@@ -139,8 +139,8 @@
     },
     "frederikshavn": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-12",
+      "forventetAftaleDato": "2026-09-22",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-07",
       "budgetforslagDato": "2026-08-26",
@@ -158,12 +158,14 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "mariagerfjord": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "budgetforslagDato": "2026-09-17",
@@ -181,7 +183,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "horsens": {
       "status": "aftale_indgaaet",
@@ -205,7 +209,7 @@
     },
     "silkeborg": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
+      "forventetForhandlingsStart": "2026-09-07",
       "forventetAftaleDato": "2026-09-17",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
@@ -224,12 +228,13 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true
     },
     "skanderborg": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-05",
+      "forventetAftaleDato": "2026-09-15",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-09-30",
       "links": [
@@ -240,14 +245,16 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "syddjurs": {
       "status": "forhandling",
       "forventetForhandlingsStart": "2026-09-13",
       "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
-      "vedtagelsesDato": "2026-10-08",
+      "vedtagelsesDato": "2026-10-07",
       "links": [
         {
           "titel": "Budget 2027 (syddjurs.dk)",
@@ -257,7 +264,17 @@
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z",
-      "forventetForhandlingsStartSkoen": true
+      "forventetForhandlingsStartSkoen": true,
+      "budgetforslagDato": "2026-08-20",
+      "budgetforslagLink": {
+        "titel": "Omstillingskatalog til Budget 2027 (syddjurs.dk, 10. august 2026)",
+        "url": "https://www.syddjurs.dk/media/4kfnh3vl/omstillingskatalog-til-budget-2027_10-august-2026_.pdf"
+      },
+      "budgetforslagSocialNaevnt": "Omstillingskataloget (offentliggjort 10. august 2026) indeholder besparelsesforslag for i alt 30 mio. kr. på tværs af alle udvalg. Social- og beskæftigelsesudvalgets andel udgør 3,31 mio. kr. i 2027 (3,36 mio. kr. i 2028-2030), bl.a. via reduktion af Velfærdsomstillingspuljen (0,5 mio. kr.), omlægning af opgaver i Ungdommens Uddannelsesvejledning, og optimering af IT/dokumentation ved Social. Direktionens budgetoplæg præsenteres for Byrådet 20. august 2026.",
+      "budgetforslagBeskaeftigelseNaevnt": "Beskæftigelse indgår i samme udvalgsramme (Social- og beskæftigelsesudvalget) — bl.a. optimering af IT/telefoni og fjernelse af tillæg ved Beskæftigelse, samt \"Færre borgere i offentligt løntilskud\" (0,25 mio. kr.).",
+      "socialBesparelseMio": 3.31,
+      "socialBesparelseKilde": "budgetforslag",
+      "socialBesparelseNote": "Social- og beskæftigelsesudvalgets samlede andel af omstillingskataloget: 3,31 mio. kr. i 2027 (3,36 mio. kr. i 2028-2030). Dækker både socialområdet (bl.a. IT/dokumentation ved Social, aktivitets-/samværstilbuddet Marie Magdalene, rusmiddelbehandling) og beskæftigelsesområdet (Ungdommens Uddannelsesvejledning, færre borgere i løntilskud). Ingen af posterne er drevet af beskæftigelsesreformen — det er lokalt besluttede besparelser."
     },
     "viborg": {
       "status": "forhandling",
@@ -303,8 +320,8 @@
     },
     "fredericia": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-10",
+      "forventetAftaleDato": "2026-09-20",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-05",
       "budgetforslagDato": "2026-09-07",
@@ -322,12 +339,14 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "kerteminde": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-06",
+      "forventetAftaleDato": "2026-09-16",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-01",
       "links": [
@@ -338,7 +357,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "kolding": {
       "status": "forhandling",
@@ -399,8 +420,8 @@
     },
     "greve": {
       "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-10",
+      "forventetAftaleDato": "2026-09-20",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-05",
       "budgetforslagDato": "2026-09-07",
@@ -418,12 +439,14 @@
       ],
       "resumeSocial": "Datoer bør verificeres direkte i mødekalenderen — kilden angav ikke eksplicit, at møderne er budgetbehandlinger.",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "guldborgsund": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "budgetforslagDato": "2026-09-17",
@@ -441,12 +464,14 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "holbaek": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-12",
+      "forventetAftaleDato": "2026-09-22",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-07",
       "budgetforslagDato": "2026-08-31",
@@ -464,7 +489,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "lolland": {
       "status": "forhandling",
@@ -491,8 +518,8 @@
     },
     "naestved": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-11",
+      "forventetAftaleDato": "2026-09-21",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-06",
       "budgetforslagDato": "2026-08-20",
@@ -510,7 +537,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "ringsted": {
       "status": "forhandling",
@@ -542,8 +571,8 @@
     },
     "slagelse": {
       "status": "ikke_startet",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-11",
+      "forventetAftaleDato": "2026-09-21",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-06",
       "budgetforslagDato": "2026-09-08",
@@ -561,12 +590,14 @@
       ],
       "resumeSocial": "Datoer bør verificeres – ikke fuldt bekræftet i de fundne kilder.",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "ballerup": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-11",
+      "forventetAftaleDato": "2026-09-21",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-06",
       "links": [
@@ -577,7 +608,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "bornholm": {
       "status": "forhandling",
@@ -648,8 +681,8 @@
     },
     "frederikssund": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-12",
+      "forventetAftaleDato": "2026-09-22",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-07",
       "links": [
@@ -660,12 +693,14 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "gentofte": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-14",
+      "forventetAftaleDato": "2026-09-24",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-09",
       "links": [
@@ -676,7 +711,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "gladsaxe": {
       "status": "forhandling",
@@ -697,8 +734,8 @@
     },
     "hoeje-taastrup": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "budgetforslagDato": "2026-09-10",
@@ -716,12 +753,14 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "rudersdal": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "links": [
@@ -732,7 +771,9 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z"
+      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "roedovre": {
       "status": "forhandling",
@@ -785,8 +826,8 @@
     },
     "holstebro": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-12",
+      "forventetAftaleDato": "2026-09-22",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-07",
       "budgetforslagDato": "",
@@ -804,7 +845,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "ikast-brande": {
       "status": "forhandling",
@@ -928,8 +971,8 @@
     },
     "frederiksberg": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-11",
+      "forventetAftaleDato": "2026-09-21",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-06",
       "budgetforslagDato": "",
@@ -947,7 +990,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "furesoe": {
       "status": "forhandling",
@@ -1045,7 +1090,7 @@
       "forventetForhandlingsStartSkoen": true
     },
     "jammerbugt": {
-      "status": "aftale_indgaaet",
+      "status": "ikke_startet",
       "forventetForhandlingsStart": "",
       "forventetAftaleDato": "",
       "aftaleDato": "",
@@ -1056,11 +1101,11 @@
       "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Budgetforlig i Jammerbugt styrker de store velfærdsområder (DK Nyt)",
-          "url": "https://www.dknyt.dk/artikel/budgetforlig-i-jammerbugt-styrker-de-store-velfaerdsomraader"
+          "titel": "Kommunens økonomi (jammerbugt.dk)",
+          "url": "https://jammerbugt.dk/"
         }
       ],
-      "resumeSocial": "Ifølge DK Nyt er et bredt flertal (Dansk Folkeparti, Danmarksdemokraterne, Venstre, SF, Socialdemokratiet) indgået i budgetforlig, som styrker de store velfærdsområder. Præcis dato er ikke bekræftet og bør verificeres direkte hos kommunen, før status regnes for endelig.",
+      "resumeSocial": "OBS: Tidligere fejlagtigt markeret som 'Aftale indgået' på baggrund af en DK Nyt-artikel, som viste sig at være fra 8. september 2025 og omhandle Budget 2026 — ikke 2027. Rettet 1. sep. 2026. Ingen bekræftet 2027-status fundet endnu.",
       "resumeBeskaeftigelse": "",
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
@@ -1350,8 +1395,8 @@
     },
     "fanoe": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2023-09-14",
+      "forventetAftaleDato": "2023-09-24",
       "aftaleDato": "",
       "vedtagelsesDato": "2023-10-09",
       "budgetforslagDato": "",
@@ -1369,7 +1414,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "haderslev": {
       "status": "forhandling",
@@ -1456,8 +1503,8 @@
     },
     "soenderborg": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2023-09-16",
+      "forventetAftaleDato": "2023-09-26",
       "aftaleDato": "",
       "vedtagelsesDato": "2023-10-11",
       "budgetforslagDato": "",
@@ -1475,7 +1522,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "vejen": {
       "status": "forhandling",
@@ -1514,10 +1563,10 @@
       "sidstOpdateret": ""
     },
     "aabenraa": {
-      "status": "forhandling",
-      "forventetForhandlingsStart": "2025-08-23",
-      "forventetAftaleDato": "2025-09-02",
-      "aftaleDato": "",
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "2026-09-01",
+      "aftaleDato": "2026-09-01",
       "vedtagelsesDato": "",
       "budgetforslagDato": "",
       "budgetforslagLink": null,
@@ -1525,17 +1574,23 @@
       "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Så er millionerne fordelt (jv.dk)",
-          "url": "https://jv.dk/aabenraa/saa-er-millionerne-fordelt-se-her-hvem-der-faar-penge-i-naeste-aars-budget"
+          "titel": "Budget 2027: Fokus på driften (pressemeddelelse, aabenraa.dk via Ritzau)",
+          "url": "https://via.ritzau.dk/pressemeddelelse/15128628/budget-2027-fokus-pa-driften?lang=da"
+        },
+        {
+          "titel": "Budgetaftale 2027-2030 (fuld aftaletekst, PDF)",
+          "url": "https://via.ritzau.dk/files/11824589/15128628/520235/da"
         }
       ],
-      "resumeSocial": "Budget 2026 blev fremlagt på rådhuset 2. september 2025 med hele byrådet bag.",
-      "resumeBeskaeftigelse": "",
+      "resumeSocial": "Alle 9 partier i Byrådet står bag aftalen (indgået/underskrevet 1. sep. 2026) — ingen besparelser eller omprioriteringer var nødvendige i år. På Social & Senior: 2,5 mio. kr./år til koordinering/opnormering i hjemme- og sygeplejen (som led i ældrereformen), 2 mio. kr./år til opnormering på plejehjem, 2 mio. kr./år til vågeteknologi i 100 boliger på plejehjem/bosteder, 0,75 mio. kr./år til idræts-/inklusionsprojektet 'Med på holdet' for borgere på socialområdet, samt mindre puljer til ældreaktiviteter og Valdemarshus. På Sundhed & Forebyggelse: udvidet Headspace-samarbejde (0,33 mio. kr./år), videreført behandlingsgaranti (0,435 mio. kr./år) og øget tilskud til TUBA (+0,235 mio. kr./år).",
+      "resumeBeskaeftigelse": "Aftalen nævner eksplicit beskæftigelsesreformen som baggrund: 'I lyset af beskæftigelsesreformen og de reducerede rammer til indsatser for forskellige målgrupper' afsættes 1,5 mio. kr. (2027+2028) til at videreføre partnerskabsprojektet med Padborg Transportcenter, og 0,7 mio. kr. (2027+2028) til et projekt der skal bringe en bredere målgruppe tættere på arbejdsmarked/uddannelse. Desuden 0,699 mio. kr./år i 3 år til at tiltrække/fastholde uddannelser i kommunen.",
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": "",
-      "forventetForhandlingsStartSkoen": true
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "faxe": {
       "status": "forhandling",
@@ -1704,8 +1759,8 @@
     },
     "albertslund": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-11",
+      "forventetAftaleDato": "2026-09-21",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-06",
       "budgetforslagDato": "2026-08-19",
@@ -1726,7 +1781,12 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "EKSKLUDERET fra tælleren: de 7,5 mio. kr. på beskæftigelsesområdet er eksplicit afledt af beskæftigelsesreformen (national lovændring), ikke en lokalt besluttet besparelse.",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "alleroed": {
       "status": "forhandling",
@@ -1752,12 +1812,15 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": ""
     },
     "dragoer": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2025-08-31",
+      "forventetAftaleDato": "2025-09-10",
       "aftaleDato": "",
       "vedtagelsesDato": "2025-09-25",
       "budgetforslagDato": "2026-08-14",
@@ -1778,12 +1841,14 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "glostrup": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2025-09-13",
+      "forventetAftaleDato": "2025-09-23",
       "aftaleDato": "",
       "vedtagelsesDato": "2025-10-08",
       "budgetforslagDato": "",
@@ -1805,12 +1870,14 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "gribskov": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2026-09-13",
+      "forventetAftaleDato": "2026-09-23",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-08",
       "budgetforslagDato": "2026-09-01",
@@ -1831,12 +1898,14 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "halsnaes": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2025-09-14",
+      "forventetAftaleDato": "2025-09-24",
       "aftaleDato": "",
       "vedtagelsesDato": "2025-10-09",
       "budgetforslagDato": "",
@@ -1854,7 +1923,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "helsingoer": {
       "status": "forhandling",
@@ -1956,7 +2027,7 @@
     },
     "hoersholm": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
+      "forventetForhandlingsStart": "2026-09-04",
       "forventetAftaleDato": "2026-09-14",
       "aftaleDato": "",
       "vedtagelsesDato": "2026-10-05",
@@ -1978,12 +2049,13 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true
     },
     "ishoej": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2025-09-11",
+      "forventetAftaleDato": "2025-09-21",
       "aftaleDato": "",
       "vedtagelsesDato": "2025-10-06",
       "budgetforslagDato": "2026-08-15",
@@ -2008,12 +2080,14 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "lyngby-taarbaek": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2025-09-14",
+      "forventetAftaleDato": "2025-09-24",
       "aftaleDato": "",
       "vedtagelsesDato": "2025-10-09",
       "budgetforslagDato": "",
@@ -2031,7 +2105,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     },
     "taarnby": {
       "status": "forhandling",
@@ -2058,8 +2134,8 @@
     },
     "vallensbaek": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
+      "forventetForhandlingsStart": "2025-08-21",
+      "forventetAftaleDato": "2025-08-31",
       "aftaleDato": "",
       "vedtagelsesDato": "2025-09-15",
       "budgetforslagDato": "",
@@ -2077,7 +2153,9 @@
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": ""
+      "sidstOpdateret": "",
+      "forventetForhandlingsStartSkoen": true,
+      "forventetAftaleDatoSkoen": true
     }
   },
   "NEWS_ITEMS": [
