@@ -397,6 +397,10 @@
     line-height:1.5;
   }
   .gap-metric-note{font-size:12px;color:var(--ink-soft);}
+  .gap-metric-list{margin:8px 0 0;padding-left:18px;list-style:disc;}
+  .gap-metric-list li{margin-bottom:8px;font-size:13px;line-height:1.5;}
+  .gap-metric-list li:last-child{margin-bottom:0;}
+  .gap-metric-usikker{margin-top:10px;padding-top:10px;border-top:1px dashed #EFDFAF;font-size:12px;color:#8A5A16;line-height:1.5;}
   .close-btn-text{
     border:1px solid var(--line);background:var(--surface);border-radius:3px;
     cursor:pointer;font-size:13px;padding:8px 16px;color:var(--ink);font-family:inherit;
@@ -592,25 +596,59 @@ let NEWS_ITEMS = [
 const SEED_VERSION_KEY = "budgetforhandlinger-seed-version";
 // Bump denne, hver gang SEED_DATA nedenfor opdateres med ny research —
 // så synkroniseres den friske data automatisk, næste gang siden åbnes.
-const SEED_VERSION = "2026-09-01-6";
+const SEED_VERSION = "2026-09-03-10";
 
 // Research pr. 31. august 2026. Datoer for Aarhus, Aalborg og Randers er dels bekræftede,
 // dels et kvalificeret skøn ud fra tidligere års mønster, da den endelige tidsplan for 2027
 // ikke i alle tilfælde er offentliggjort endnu — tjek altid kommunens egen side via linket.
 let SEED_DATA = {
   koebenhavn: {
-    status: "forhandling",
+    status: "aftale_indgaaet",
     forventetForhandlingsStart: "2026-08-28",
-    forventetAftaleDato: "2026-09-11",
-    aftaleDato: "",
+    forventetAftaleDato: "2026-09-03",
+    aftaleDato: "2026-09-03",
     vedtagelsesDato: "2026-10-01",
     links: [{
-        titel: "Sådan foregår budgetprocessen (kk.dk)",
-        url: "https://www.kk.dk/politik/budget-og-regnskab/budgetproces-og-vedtagelse/saadan-foregaar-budgetprocessen"
+        titel: "Fuld aftaletekst Budget 2027 (kk.dk, PDF)",
+        url: "https://www.kk.dk/sites/default/files/2026-09/Aftaletekst_0.pdf"
+      }, {
+        titel: "Budget 2027 (kk.dk)",
+        url: "https://www.kk.dk/politik/budget-og-regnskab/budget-2027"
+      }, {
+        titel: "Budgetaftale i København sikrer flere boliger (Kristeligt Dagblad)",
+        url: "https://www.kristeligt-dagblad.dk/danmark/budgetaftale-i-koebenhavn-skal-sikre-flere-boliger"
+      }, {
+        titel: "Ny budgetaftale præsenteret: Millioner til boligkrisen (DR)",
+        url: "https://www.dr.dk/nyheder/indland/ny-budgetaftale-praesenteret-millioner-paa-vej-til-afhjaelpe-boligkrisen-i-koebenhavn"
       }],
-    resumeSocial: "",
-    resumeBeskaeftigelse: "",
-    sidstOpdateret: "2026-08-31T00:00:00.000Z"
+    resumeSocial: "Aftalen indeholder et markant genopretningsspor: 'Nedbringelse af visitationslisten relateret til forsyningsforpligtelsen på botilbudsområdet' (SO01) — baggrunden er, at Ankestyrelsen i december 2024 fastslog, at København har handlet i strid med forsyningsforpligtelsen ved at lade borgere stå for længe på venteliste til et botilbud. Der afsættes 211,1 mio. kr. i 2027, 327,1 mio. kr. i 2028, 334,9 mio. kr. i 2029 og 281,0 mio. kr. i 2030 — i alt 1.154,1 mio. kr. over fire år — til afvikling af ventelisten, bl.a. via køb af eksterne pladser og åbning af 330 nye kommunale botilbudspladser frem mod 2032. Herudover: 93,2 mio. kr. (2027) til handleplan for botilbuddet Boserupvej (påbud fra Socialtilsynet), 10,9 mio. kr. (2027) til botilbudspladser til borgere revisiteret fra Kildevæld, 8,9 mio. kr./år til stigende udgifter på krisecentre og herberger, 8,1 mio. kr. (2027) + 7,3 mio. kr./år (2028-30) til handleplan på Sundholm Pleje (påbud fra Arbejdstilsynet/Socialtilsynet), og 20,2 mio. kr. til modernisering af kvindeherberget på Sundholmsvej 24A. Kilde: den fulde aftaletekst (kk.dk).",
+    resumeBeskaeftigelse: "Mindre, målrettede poster: 17,5 mio. kr. (anlæg 2026-2032) til nyt beskæftigelsestilbud på Boserupvej (SO15), styrkelse af fleksjobområdet (BI51), samt AI i beskæftigelsesindsatsen (BI06). Under 'Sikker By' afsættes derudover 11,6 mio. kr./år (2027-2029) til job og uddannelse til dømte og varetægtsfængslede, og 1,3 mio. kr./år til virksomhedsopsøgende medarbejdere. Ingen store, samlede genopretningsbeløb på selve beskæftigelsesområdet, i modsætning til socialområdet.",
+    sidstOpdateret: "2026-08-31T00:00:00.000Z",
+    socialGenopretningMio: 332.2,
+    socialGenopretningKilde: "forlig",
+    socialGenopretningNote: "Samlet 332.2 mio. kr. i 2027 på tværs af FEM poster, der alle dækker eksisterende pres/påbud (ikke nye indsatser): 211,1 mio. kr. til at afvikle ventelisten på botilbudsområdet (Ankestyrelsen fastslog dec. 2024, at KK brød forsyningsforpligtelsen); 93,2 mio. kr. til handleplan for botilbuddet Boserupvej (påbud fra Socialtilsynet); 10,9 mio. kr. til botilbudspladser til borgere revisiteret fra Kildevæld (tidligere Borgervænget); 8,9 mio. kr. til stigende udgifter ved køb af krisecenter-/herbergspladser; 8,1 mio. kr. til handleplan for botilbuddet Sundholm Pleje (påbud fra Arbejdstilsynet/Socialtilsynet). Alle fem beløb fortsætter og stiger typisk i 2028-2030 — kun 2027-delen er talt med her for at holde metoden ensartet.",
+    socialGenopretningPoster: [{
+        label: "Botilbuds-venteliste (SO01)",
+        beloeb: 211.1,
+        grund: "Ankestyrelsen fastslog dec. 2024, at KK brød forsyningsforpligtelsen ved at lade borgere vente for længe på et botilbud — lovpligtig oprydning, ikke et nyt tilbud."
+      }, {
+        label: "Handleplan Boserupvej (SO04)",
+        beloeb: 93.2,
+        grund: "Konkret påbud fra Socialtilsynet — penge til at leve op til et eksisterende krav."
+      }, {
+        label: "Botilbudspladser, Kildevæld (SO05)",
+        beloeb: 10.9,
+        grund: "Følgeudgift af en tidligere revisitering af borgere fra et andet botilbud (Kildevæld/tidl. Borgervænget)."
+      }, {
+        label: "Krisecentre/herberger (SO03)",
+        beloeb: 8.9,
+        grund: "Stigende pris/aktivitet på pladser, kommunen allerede køber — ikke en udvidelse af tilbuddet."
+      }, {
+        label: "Handleplan Sundholm Pleje (SO09)",
+        beloeb: 8.1,
+        grund: "Påbud fra både Arbejdstilsynet og Socialtilsynet — samme logik som Boserupvej."
+      }],
+    socialGenopretningUsikkerhedsnote: "Aftaleteksten indeholder tre yderligere poster (SO19, SO20, SO21) under overskriften 'Socialområdet – specifikke udfordringer', som jeg endnu ikke har kunnet læse indholdet af (dokumentet kunne ikke hentes til den side). Beløbet her er derfor et MINIMUM, ikke nødvendigvis det fulde billede."
   },
   aarhus: {
     status: "ikke_startet",
@@ -1050,11 +1088,23 @@ let SEED_DATA = {
     aftaleDato: "",
     vedtagelsesDato: "2026-10-08",
     links: [{
-        titel: "Budget 2027: Budgetpakker offentliggjort (lolland.dk)",
-        url: "https://www.lolland.dk/om-kommunen/presse-og-kommunikation/nyheder/budget-2027-budgetpakker-offentliggjort"
+        titel: "Lolland mangler 531 millioner kroner: 'Drømmescenariet er overlevelse' (Danske Kommuner, 12. aug. 2026)",
+        url: "https://danskekommuner.dk/artikler/nyheder/2026/august/12/lolland-mangler-531-millioner-kroner-droemmescenariet-er-overlevelse"
+      }, {
+        titel: "Ny melding fra Lolland: Har fundet 184 millioner (TV2 ØST, 27. aug. 2026)",
+        url: "https://www.tv2east.dk/lolland/ny-melding-fra-lolland-har-fundet-184-millioner-909eb"
+      }, {
+        titel: "Budget 2027: Fremgang på beskæftigelsesområdet (lolland.dk, pressemeddelelse)",
+        url: "https://www.lolland.dk/om-kommunen/presse-og-kommunikation/pressemeddelelser/budget-2027-fremgang-paa-beskaeftigelsesomraadet"
+      }, {
+        titel: "Opgivende Lolland-borgmester mangler 110 millioner (Kristeligt Dagblad)",
+        url: "https://www.kristeligt-dagblad.dk/danmark/opgivende-lolland-borgmester-mangler-110-millioner"
+      }, {
+        titel: "Borgmester: 'Så må staten sætte os under administration' (Folketidende)",
+        url: "https://www.folketidende.dk/nyheder/borgmester-kalder-det-en-kaempe-mavepuster-sa-ma-staten-saette-os-under-administration/5340349"
       }],
-    resumeSocial: "",
-    resumeBeskaeftigelse: "",
+    resumeSocial: "Lolland Kommune er i en generel, alvorlig kommunaløkonomisk krise — den handler IKKE primært om socialområdet, men om faldende befolkningstal (ca. 10.000 færre borgere), faldende skatteindtægter og et udligningssystem, som borgmester Marie-Louise Brehm Nielsen (Din Stemme) kalder skævt. Forløb: Kommunen meldte i august ud, at der manglede 531 mio. kr. i budget 2027 (danskekommuner.dk, 12. aug). Den 27. august var hullet reduceret til 347 mio. kr. (TV2 ØST) — en forbedring på 184 mio. kr., hvoraf 73 mio. kr. skyldes et BEDRE resultat på beskæftigelsesområdet (se nedenfor), 48 mio. kr. udskudte byggerier, 20 mio. kr. lavere pris-/lønstigninger end ventet, og 21 mio. kr. låneadgang. Efterfølgende fik kommunen et statsligt særtilskud på 223 mio. kr. (ud af 333 mio. kr. ansøgt). Der resterer nu et hul på ca. 100-110 mio. kr., som borgmesteren nægter at lade byrådet finde — hun advarer om, at kommunen i så fald bør sættes under administration af staten (Kristeligt Dagblad/Folketidende, ultimo aug./primo sep. 2026).",
+    resumeBeskaeftigelse: "Positiv udvikling: Ifølge en pressemeddelelse fra Lolland Kommune ('Budget 2027: Fremgang på beskæftigelsesområdet') er økonomien på beskæftigelsesområdet 73 mio. kr. bedre end oprindeligt budgetteret, fordi flere er kommet i job og færre er på varig forsørgelse. Udvalgsformand Vibeke Grave (Social- og Arbejdsmarkedsudvalget) forklarer det med en omlægning til færre, virksomhedsrettede indsatser og tættere opfølgning på den enkelte borger. Dette er IKKE en besparelse eller en reform-effekt, men et bedre-end-ventet resultat af den førte beskæftigelsespolitik — indgår derfor ikke i nogen af tællerne.",
     sidstOpdateret: "2026-08-31T00:00:00.000Z",
     forventetForhandlingsStartSkoen: true,
     budgetforslagLink: {
@@ -1706,26 +1756,31 @@ let SEED_DATA = {
     sidstOpdateret: ""
   },
   favrskov: {
-    status: "forhandling",
-    forventetForhandlingsStart: "2026-08-24",
-    forventetAftaleDato: "2026-09-03",
-    aftaleDato: "",
-    vedtagelsesDato: "",
-    budgetforslagDato: "",
+    status: "aftale_indgaaet",
+    forventetForhandlingsStart: "",
+    forventetAftaleDato: "2026-09-01",
+    aftaleDato: "2026-09-01",
+    vedtagelsesDato: "2026-10-06",
+    budgetforslagDato: "2026-09-01",
     budgetforslagLink: null,
     budgetforslagSocialNaevnt: "",
     budgetforslagBeskaeftigelseNaevnt: "",
     links: [{
-        titel: "Budgetaftale på plads i Favrskov (favrskov.dk)",
-        url: "https://favrskov.dk/nyheder/budgetaftale-paa-plads-i-favrskov-1"
+        titel: "Budget (favrskov.dk) — officiel budgetside",
+        url: "https://favrskov.dk/en/node/222"
+      }, {
+        titel: "Onsdagens Ord: Alle 25 har skrevet under på budgettet (Søften Nyt)",
+        url: "https://www.softennyt.dk/2026/09/02/onsdagens-ord-alle-25-har-skrevet-under-paa-budgettet-saa-hvad-skal-vi-hoeres-om/"
       }],
-    resumeSocial: "Sidste års (Budget 2026) budgetaftale stod 24 af 25 byrådsmedlemmer bag, efter budgetforslaget havde været i høring med 79 høringssvar.",
-    resumeBeskaeftigelse: "",
-    socialGenopretningMio: null,
-    socialGenopretningKilde: "",
-    socialGenopretningNote: "",
-    sidstOpdateret: "",
-    forventetForhandlingsStartSkoen: true
+    resumeSocial: "Budgetforslaget indeholder en direkte genopretningspost: 'Stigende udgifter på socialområdet' (U-409ny). Det specialiserede socialområde for voksne har i 2026 oplevet et budgetpres på ca. 10 mio. kr. — forventet stigende — hvorfor der tilføres 12 mio. kr. i 2027, 14 mio. kr. i 2028, 16 mio. kr. i 2029 og 18 mio. kr. i 2030 for at opretholde det nuværende serviceniveau. Herudover afsættes en buffer-pulje på 2 mio. kr. i 2027 (stigende til 8 mio. kr. i 2030) til eventuelle FREMTIDIGE udgiftsstigninger på området — denne pulje er ikke talt med i tælleren, da den er forebyggende, ikke en dokumenteret aktuel udgift. På besparelsessiden rammer tre reduktioner specifikt det specialiserede socialområde: tilpasning af bemanding i Favrskov Rusmiddelcenter (0,65 mio. kr.), effektivisering af Mestringsvejledningen og Social Indsats via øget gruppeforløb (0,5 mio. kr.), og reducerede nattevagter på botilbuddene ved Ellemosevej (0,2 mio. kr.). De øvrige ca. 4,3 mio. kr. af Social- og Sundhedsudvalgets samlede besparelser på 5,6 mio. kr. vedrører ældreområdet og sundhedsområdet (hjemmepleje, plejeboliger, medicinhåndtering mv.), ikke det specialiserede socialområde snævert, og er derfor holdt uden for tælleren.",
+    resumeBeskaeftigelse: "Ingen specifikke beskæftigelsesposter fundet i budgetforslaget — Favrskov har ikke et selvstændigt beskæftigelsesudvalg i samme opdeling som fx København.",
+    socialGenopretningMio: 12,
+    socialGenopretningKilde: "budgetforslag",
+    socialGenopretningNote: "12 mio. kr. i 2027 (stigende til 18 mio. kr. i 2030) til at dække et dokumenteret budgetpres på det specialiserede socialområde for voksne, konstateret i 2026 til ca. 10 mio. kr. Kilde: Favrskov Kommunes eget budgetforslag (U-409ny).",
+    socialBesparelseMio: 1.35,
+    socialBesparelseKilde: "budgetforslag",
+    socialBesparelseNote: "1,35 mio. kr. i 2027 fordelt på tre konkrete reduktioner, der rammer det specialiserede socialområde specifikt: tilpasning af bemanding i Rusmiddelcenteret (0,65 mio. kr.), effektivisering af Mestringsvejledningen/Social Indsats (0,5 mio. kr.), og reducerede nattevagter på botilbuddene Ellemosevej (0,2 mio. kr.). Resten af udvalgets besparelser (ca. 4,3 mio. kr.) vedrører ældre-/sundhedsområdet og er bevidst holdt udenfor.",
+    sidstOpdateret: ""
   },
   hedensted: {
     status: "forhandling",
@@ -2012,12 +2067,18 @@ let SEED_DATA = {
     budgetforslagLink: null,
     budgetforslagSocialNaevnt: "",
     budgetforslagBeskaeftigelseNaevnt: "",
-    links: [],
-    resumeSocial: "",
+    links: [{
+        titel: "Vejen Kommunes budget (vejen.dk)",
+        url: "https://vejen.dk/politik/budget-og-regnskab"
+      }],
+    resumeSocial: "DK Nyts forside viste (primo sep. 2026) overskriften 'Budgetforberedelser: Vejen kigger ind i et underskud på 178 mio. kr.', men den fulde artikel er bag betalingsmur, og jeg kunne ikke finde en selvstændig, gratis kilde, der bekræfter tallet eller uddyber, hvad underskuddet skyldes. Betragt de 178 mio. kr. som ubekræftet, indtil en primær kilde er fundet.",
     resumeBeskaeftigelse: "",
     socialGenopretningMio: null,
     socialGenopretningKilde: "",
     socialGenopretningNote: "",
+    socialBesparelseMio: null,
+    socialBesparelseKilde: "",
+    socialBesparelseNote: "",
     sidstOpdateret: ""
   },
   aeroe: {
@@ -2595,7 +2656,7 @@ let SEED_DATA = {
 };
 
 let state = {}; // id -> record
-let lastUpdated = "2026-08-31";
+let lastUpdated = "2026-09-03";
 let filters = { region: "Alle", status: "Alle", search: "" };
 let sortBy = "aktualitet"; // "aktualitet" eller et kolonnenavn
 let sortDir = "asc";
@@ -2664,6 +2725,8 @@ function emptyRecord(){
     socialGenopretningMio: null,
     socialGenopretningKilde: "", // "forlig" eller "budgetforslag"
     socialGenopretningNote: "",
+    socialGenopretningPoster: [], // valgfri, detaljeret opdeling: [{label, beloeb, grund}]
+    socialGenopretningUsikkerhedsnote: "", // valgfri: vises som en synlig advarsel, hvis beløbet er ufuldstændigt/usikkert
     // Penge SPARET/SKÅRET specifikt på social- eller beskæftigelsesområdet (spareplaner sat i værk) —
     // modstykket til genopretning: her er pengene taget væk, ikke tilført.
     socialBesparelseMio: null,
@@ -2770,6 +2833,29 @@ function fmtDateLong(dateStr){
 
 function escapeHtml(s){
   return (s||"").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// Bygger en tydelig, punktopstillet boks til genopretningstal — med en itemiseret liste,
+// hvis den findes (socialGenopretningPoster), ellers falder tilbage til den samlede note.
+function renderGenopretningBox(r, verbum){
+  const poster = r.socialGenopretningPoster || [];
+  const usikker = r.socialGenopretningUsikkerhedsnote
+    ? `<div class="gap-metric-usikker">⚠️ <strong>Usikkerhed om beløbet:</strong> ${escapeHtml(r.socialGenopretningUsikkerhedsnote)}</div>`
+    : '';
+  if(poster.length){
+    return `
+      <div class="gap-metric">
+        <div>💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> ${verbum} i alt til at dække underskud/pres på socialområdet:</div>
+        <ul class="gap-metric-list">
+          ${poster.map(p => `<li><strong>${p.beloeb} mio. kr.</strong> — ${escapeHtml(p.label)}: <span class="gap-metric-note">${escapeHtml(p.grund)}</span></li>`).join('')}
+        </ul>
+        ${usikker}
+      </div>
+    `;
+  }
+  return `
+    <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> ${verbum} til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span>${usikker}</div>
+  `;
 }
 
 function computeGenopretning(){
@@ -3079,18 +3165,14 @@ function renderModal(){
         ${r.budgetforslagLink ? `<div class="proposal-link">→ <a href="${escapeHtml(r.budgetforslagLink.url)}" target="_blank" rel="noopener">${escapeHtml(r.budgetforslagLink.titel)}</a></div>` : ''}
         ${r.budgetforslagSocialNaevnt ? `<div class="proposal-flag"><strong>Socialområdet nævnt:</strong> ${escapeHtml(r.budgetforslagSocialNaevnt)}</div>` : ''}
         ${r.budgetforslagBeskaeftigelseNaevnt ? `<div class="proposal-flag"><strong>Beskæftigelsesområdet nævnt:</strong> ${escapeHtml(r.budgetforslagBeskaeftigelseNaevnt)}</div>` : ''}
-        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "budgetforslag") ? `
-          <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> foreslået til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span></div>
-        ` : ''}
+        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "budgetforslag") ? renderGenopretningBox(r, "foreslået") : ''}
       </div>
       ` : ''}
 
       <div class="brief-section">
         <h3>Socialområdet <span class="kilde-tag">${r.resumeSocial ? 'Kilde: forlig' : ''}</span></h3>
         <p class="${!r.resumeSocial?'empty-cell':''}">${r.resumeSocial ? escapeHtml(r.resumeSocial) : 'Ingen aftale landet endnu — opdateres når forhandlingerne er afsluttet.'}</p>
-        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "forlig") ? `
-          <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> tilført til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span></div>
-        ` : ''}
+        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "forlig") ? renderGenopretningBox(r, "tilført") : ''}
       </div>
       <div class="brief-section">
         <h3>Beskæftigelsesområdet <span class="kilde-tag">${r.resumeBeskaeftigelse ? 'Kilde: forlig' : ''}</span></h3>
