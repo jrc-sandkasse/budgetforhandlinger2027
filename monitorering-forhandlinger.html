@@ -401,6 +401,29 @@
   .gap-metric-list li{margin-bottom:8px;font-size:13px;line-height:1.5;}
   .gap-metric-list li:last-child{margin-bottom:0;}
   .gap-metric-usikker{margin-top:10px;padding-top:10px;border-top:1px dashed #EFDFAF;font-size:12px;color:#8A5A16;line-height:1.5;}
+  .gap-metric-aarhus{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(0,0,0,0.1);font-size:12px;color:var(--ink-soft);line-height:1.5;}
+  .gap-metric-knife{background:#FBE0DC;border:1px solid #EAB0A6;}
+  .gap-metric-knife .gap-metric-note{color:#7A3530;}
+
+  .aarhus-faktaboks{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    margin-bottom:20px;
+    box-shadow:0 1px 3px rgba(22,35,58,0.05);
+  }
+  .aarhus-faktaboks-title{font-family:'Fraunces', serif;font-size:16px;font-weight:600;margin-bottom:4px;}
+  .aarhus-faktaboks-sub{font-size:12px;color:var(--ink-soft);margin-bottom:12px;}
+  .aarhus-faktaboks-subheading{font-size:13px;font-weight:600;margin-bottom:8px;}
+  .aarhus-faktaboks-table{width:100%;border-collapse:collapse;}
+  .aarhus-faktaboks-table th{
+    text-align:left;font-size:11px;color:var(--ink-soft);font-weight:500;
+    padding:6px 10px;border-bottom:1px solid var(--line);
+  }
+  .aarhus-faktaboks-table td{padding:8px 10px;font-size:13px;border-bottom:1px solid var(--line);}
+  .aarhus-faktaboks-table tr:last-child td{border-bottom:none;}
+  .pop-missing{font-size:11.5px;color:#8A5A16;font-weight:600;}
   .close-btn-text{
     border:1px solid var(--line);background:var(--surface);border-radius:3px;
     cursor:pointer;font-size:13px;padding:8px 16px;color:var(--ink);font-family:inherit;
@@ -596,7 +619,7 @@ let NEWS_ITEMS = [
 const SEED_VERSION_KEY = "budgetforhandlinger-seed-version";
 // Bump denne, hver gang SEED_DATA nedenfor opdateres med ny research —
 // så synkroniseres den friske data automatisk, næste gang siden åbnes.
-const SEED_VERSION = "2026-09-03-10";
+const SEED_VERSION = "2026-09-03-16";
 
 // Research pr. 31. august 2026. Datoer for Aarhus, Aalborg og Randers er dels bekræftede,
 // dels et kvalificeret skøn ud fra tidligere års mønster, da den endelige tidsplan for 2027
@@ -917,9 +940,9 @@ let SEED_DATA = {
       }],
     resumeSocial: "7 ud af 8 partier (alle undtagen Danmarksdemokraterne) står bag aftalen. Handicap- og psykiatriområdet (det specialiserede voksenområde) tilføres 97 mio. kr. oven i de 80 mio. kr., der allerede var afsat sidste år — og tidligere besluttede servicereduktioner på området bliver ikke gennemført. Der afsættes 1 mio. kr. til Headspace til psykisk sårbare unge. På ældreområdet udvides daghjemskapaciteten til demensramte (3 pladser i Tarm, 5 i Skjern), og plejeboligområdet får tilbageført 3,8 mio. kr. Der afsættes desuden midler til socialrådgivere på skoler og dagtilbud til tidlig, forebyggende indsats, samt en udvidelse af tilskuddet til pasning af eget barn.",
     resumeBeskaeftigelse: "Ikke omtalt specifikt i kommunens pressemeddelelse om aftalen.",
-    socialGenopretningMio: 97,
+    socialGenopretningMio: 23.4,
     socialGenopretningKilde: "forlig",
-    socialGenopretningNote: "97 mio. kr. tilført det specialiserede voksenområde (handicap/psykiatri) for at dække udgiftspresset og undgå tidligere planlagte servicereduktioner. Kommer oven i 80 mio. kr. afsat sidste år.",
+    socialGenopretningNote: "RETTET (3. sep. 2026): Pressemeddelelsens '97 mio. kr.' er den SAMLEDE sum over hele budgetperioden 2027-2030 til Handicap og Psykiatri (bekræftet i kommunens egen talnøgletalstabel: 23,386 mio. kr. i 2027 + 25,190 i 2028 + 24,190 i 2029 + 23,190 i 2030 ≈ 96 mio. kr. i alt). 2027-delen alene er 23,4 mio. kr., og det er det tal, der indgår i tælleren her, for at være sammenlignelig med de øvrige kommuner (som alle kun tæller 2027).",
     sidstOpdateret: "2026-08-31T00:00:00.000Z"
   },
   fredericia: {
@@ -1359,16 +1382,25 @@ let SEED_DATA = {
       }],
     resumeSocial: "",
     resumeBeskaeftigelse: "",
-    socialGenopretningMio: 64,
+    socialGenopretningMio: 27.5,
     socialGenopretningKilde: "budgetforslag",
-    socialGenopretningNote: "64 mio. kr. årligt fra 2027 foreslået til det specialiserede socialområde for at følge det stigende udgiftsbehov. Dette er forvaltningens forslag — ikke et indgået forlig, og tallet kan ændre sig i forhandlingerne.",
+    socialGenopretningNote: "Se de to poster ovenfor for detaljer og kilde.",
     sidstOpdateret: "2026-08-31T00:00:00.000Z",
     budgetforslagLink: {
       titel: "Budgetforslag 2027: Rødovre holder fast i velfærden (rk.dk)",
       url: "https://rk.dk/service-og-pressemeddelelser/service-og-pressemeddelelser-2026/budgetforslag-2027"
     },
     budgetforslagSocialNaevnt: "Budgetforslaget (ikke forlig) indeholder besparelser/effektiviseringer på ca. 27 mio. kr., primært drevet af udgifter til fordrevne ukrainere. Det specialiserede socialområde løftes med 64 mio. kr. årligt fra 2027 for at følge det stigende udgiftsbehov. Intet forlig indgået endnu.",
-    budgetforslagBeskaeftigelseNaevnt: ""
+    budgetforslagBeskaeftigelseNaevnt: "",
+    socialGenopretningPoster: [{
+        label: "Det specialiserede voksenområde",
+        beloeb: 20,
+        grund: "Udgifterne til køb af tilbud på det specialiserede voksenområde steg markant i 2025 (merforbrug ca. 13 mio. kr.); stigningen får fuld effekt i 2026, og der forventes et merbehov i 2027. Årlig post, identisk 2027-2030."
+      }, {
+        label: "Det specialiserede børneområde",
+        beloeb: 7.5,
+        grund: "9 flere anbringelser siden december 2024, og en tilvækst i antal børn/unge med behov for støtte på ca. 6 pct. årligt. Der forventes et merbehov i 2027. Årlig post, identisk 2027-2030."
+      }]
   },
   herning: {
     status: "forhandling",
@@ -2837,24 +2869,55 @@ function escapeHtml(s){
 
 // Bygger en tydelig, punktopstillet boks til genopretningstal — med en itemiseret liste,
 // hvis den findes (socialGenopretningPoster), ellers falder tilbage til den samlede note.
-function renderGenopretningBox(r, verbum){
+// Befolkningstal pr. 1. januar 2026 (Danmarks Statistik, tabel FOLK1AM, hvor det er direkte
+// verificeret — ellers statdata.dk som fallback, markeret nedenfor). VIGTIGT: hver gang en ny
+// kommune får et konkret tilførsels- eller besparelsestal i data.json, SKAL dens indbyggertal
+// tilføjes her — ellers vises kommunen med en synlig "Befolkningstal mangler"-advarsel i
+// faktaboksen i stedet for at forsvinde stille.
+const POPULATION = {
+  aarhus: 378361,               // DST FOLK1AM, bekræftet direkte
+  koebenhavn: 667099,           // statdata.dk (ikke direkte DST-verificeret endnu)
+  roedovre: 45118,              // DST-tal, fra Rødovre Kommunes eget budgetforslag 2027 (1. jan. 2026, "faktisk tal")
+  favrskov: 49359,              // statdata.dk (ikke direkte DST-verificeret endnu)
+  "ringkoebing-skjern": 55405,  // Wikipedia/DST FOLK1AM, 1. jan. 2026
+  syddjurs: 44101               // statdata.dk (ikke direkte DST-verificeret endnu)
+};
+const AARHUS_ID = "aarhus";
+
+// Beregner, hvad et beløb ville svare til, hvis samme indsats pr. indbygger blev lavet i Aarhus.
+function aarhusEkvivalent(id, mio){
+  const pop = POPULATION[id];
+  const aarhusPop = POPULATION[AARHUS_ID];
+  if(!pop || !aarhusPop || id === AARHUS_ID) return null;
+  return Math.round((mio / pop) * aarhusPop * 10) / 10;
+}
+
+function renderAarhusSammenligning(id, mio){
+  const eq = aarhusEkvivalent(id, mio);
+  if(eq === null) return '';
+  return `<div class="gap-metric-aarhus">📏 Justeret for indbyggertal svarer det til <strong>${eq.toLocaleString('da-DK')} mio. kr.</strong>, hvis samme indsats pr. indbygger blev lavet i Aarhus.</div>`;
+}
+
+function renderGenopretningBox(r, verbum, kommuneId){
   const poster = r.socialGenopretningPoster || [];
   const usikker = r.socialGenopretningUsikkerhedsnote
     ? `<div class="gap-metric-usikker">⚠️ <strong>Usikkerhed om beløbet:</strong> ${escapeHtml(r.socialGenopretningUsikkerhedsnote)}</div>`
     : '';
+  const aarhusSml = renderAarhusSammenligning(kommuneId, r.socialGenopretningMio);
   if(poster.length){
     return `
       <div class="gap-metric">
-        <div>💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> ${verbum} i alt til at dække underskud/pres på socialområdet:</div>
+        <div>💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> ${verbum} i 2027 i alt til at dække underskud/pres på socialområdet:</div>
         <ul class="gap-metric-list">
           ${poster.map(p => `<li><strong>${p.beloeb} mio. kr.</strong> — ${escapeHtml(p.label)}: <span class="gap-metric-note">${escapeHtml(p.grund)}</span></li>`).join('')}
         </ul>
+        ${aarhusSml}
         ${usikker}
       </div>
     `;
   }
   return `
-    <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> ${verbum} til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span>${usikker}</div>
+    <div class="gap-metric">💰 <strong>${r.socialGenopretningMio} mio. kr.</strong> ${verbum} i 2027 til at dække underskuddet på socialområdet<br><span class="gap-metric-note">${escapeHtml(r.socialGenopretningNote)}</span>${aarhusSml}${usikker}</div>
   `;
 }
 
@@ -2886,6 +2949,16 @@ function computeBesparelse(){
     }
   });
   return { total, kommunerMedTal };
+}
+
+function renderBesparelseBox(r, kommuneId){
+  const eq = aarhusEkvivalent(kommuneId, r.socialBesparelseMio);
+  const aarhusSml = eq !== null
+    ? `<div class="gap-metric-aarhus">📏 Justeret for indbyggertal svarer det til <strong>${eq.toLocaleString('da-DK')} mio. kr.</strong>, hvis samme besparelse pr. indbygger blev lavet i Aarhus.</div>`
+    : '';
+  return `
+    <div class="gap-metric gap-metric-knife">🔪 <strong>${r.socialBesparelseMio} mio. kr.</strong> skåret/sparet i 2027 på social-/beskæftigelsesområdet<br><span class="gap-metric-note">${escapeHtml(r.socialBesparelseNote)}</span>${aarhusSml}</div>
+  `;
 }
 
 function computeStats(){
@@ -2966,6 +3039,57 @@ function emptyRow(){
   return `<tr><td colspan="9" class="empty-cell" style="padding:16px 12px;">Ingen kommuner matcher filtrene.</td></tr>`;
 }
 
+function renderAarhusFaktaboks(){
+  const genopretningRows = KOMMUNER
+    .map(k => ({ k, r: state[k.id] }))
+    .filter(x => x.r && typeof x.r.socialGenopretningMio === "number")
+    .filter(x => x.k.id !== AARHUS_ID);
+
+  const besparelseRows = KOMMUNER
+    .map(k => ({ k, r: state[k.id] }))
+    .filter(x => x.r && typeof x.r.socialBesparelseMio === "number")
+    .filter(x => x.k.id !== AARHUS_ID);
+
+  if(!genopretningRows.length && !besparelseRows.length) return '';
+
+  const popCell = (id) => {
+    const pop = POPULATION[id];
+    return pop ? pop.toLocaleString('da-DK') : `<span class="pop-missing">⚠️ mangler</span>`;
+  };
+
+  const renderTable = (rows, mioField, badge) => `
+    <table class="aarhus-faktaboks-table">
+      <thead>
+        <tr><th>Kommune</th><th>Indbyggertal</th><th>Beløb</th><th>Aarhus-ækvivalent</th></tr>
+      </thead>
+      <tbody>
+        ${rows.map(({k,r}) => {
+          const mio = r[mioField];
+          const eq = aarhusEkvivalent(k.id, mio);
+          return `<tr><td>${k.navn}</td><td>${popCell(k.id)}</td><td>${mio.toLocaleString('da-DK')} mio. kr.</td><td>${eq !== null ? `<strong>${eq.toLocaleString('da-DK')} mio. kr.</strong>` : `<span class="pop-missing">⚠️ Befolkningstal mangler</span>`}</td></tr>`;
+        }).join('')}
+      </tbody>
+    </table>
+  `;
+
+  return `
+    <div class="aarhus-faktaboks">
+      <div class="aarhus-faktaboks-title">📏 Sat i forhold til Aarhus' størrelse</div>
+      <div class="aarhus-faktaboks-sub">Hvad de dokumenterede 2027-beløb ville svare til, hvis samme indsats pr. indbygger blev lavet i Aarhus (${POPULATION[AARHUS_ID].toLocaleString('da-DK')} indbyggere, DST).</div>
+
+      ${genopretningRows.length ? `
+        <div class="aarhus-faktaboks-subheading"><span class="money-badge">💵 Tilførsel</span></div>
+        ${renderTable(genopretningRows, 'socialGenopretningMio')}
+      ` : ''}
+
+      ${besparelseRows.length ? `
+        <div class="aarhus-faktaboks-subheading" style="margin-top:16px;"><span class="knife-badge">🔪 Besparelse</span></div>
+        ${renderTable(besparelseRows, 'socialBesparelseMio')}
+      ` : ''}
+    </div>
+  `;
+}
+
 function render(){
   const root = document.getElementById('root');
   const stats = computeStats();
@@ -2993,7 +3117,7 @@ function render(){
           <div class="gap-hero-num">${genopretning.total.toLocaleString('da-DK')} <span class="gap-hero-unit">mio. kr.</span></div>
           <span class="gap-hero-badge">Foreløbigt</span>
         </div>
-        <div class="gap-hero-label">tilført for at dække underskuddet/udgiftspresset på <strong>socialområdet</strong> på tværs af kommunerne</div>
+        <div class="gap-hero-label">tilført <strong>i 2027</strong> for at dække underskuddet/udgiftspresset på <strong>socialområdet</strong> på tværs af kommunerne — kun 2027-delen, ikke summeret over hele budgetperioden</div>
         <button class="gap-hero-breakdown-btn" id="breakdownBtn">Se hvad tallet består af →</button>
       </div>
     </div>
@@ -3005,10 +3129,12 @@ function render(){
           <div class="gap-hero-num">${besparelse.total.toLocaleString('da-DK')} <span class="gap-hero-unit">mio. kr.</span></div>
           <span class="gap-hero-badge">Foreløbigt</span>
         </div>
-        <div class="gap-hero-label">skåret/sparet specifikt på <strong>social- og beskæftigelsesområdet</strong> (ekskl. besparelser der alene skyldes beskæftigelsesreformen) — konkrete spareplaner sat i værk, på tværs af kommunerne</div>
+        <div class="gap-hero-label">skåret/sparet <strong>i 2027</strong> specifikt på <strong>social- og beskæftigelsesområdet</strong> (ekskl. reform-drevne besparelser) — kun 2027-delen, ikke summeret over hele budgetperioden</div>
         <button class="gap-hero-breakdown-btn" id="besparelseBtn">Se hvad tallet består af →</button>
       </div>
     </div>
+
+    ${renderAarhusFaktaboks()}
 
     <div class="news-bar">
       <div class="news-bar-label">Seneste om socialområdets udfordringer</div>
@@ -3165,14 +3291,15 @@ function renderModal(){
         ${r.budgetforslagLink ? `<div class="proposal-link">→ <a href="${escapeHtml(r.budgetforslagLink.url)}" target="_blank" rel="noopener">${escapeHtml(r.budgetforslagLink.titel)}</a></div>` : ''}
         ${r.budgetforslagSocialNaevnt ? `<div class="proposal-flag"><strong>Socialområdet nævnt:</strong> ${escapeHtml(r.budgetforslagSocialNaevnt)}</div>` : ''}
         ${r.budgetforslagBeskaeftigelseNaevnt ? `<div class="proposal-flag"><strong>Beskæftigelsesområdet nævnt:</strong> ${escapeHtml(r.budgetforslagBeskaeftigelseNaevnt)}</div>` : ''}
-        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "budgetforslag") ? renderGenopretningBox(r, "foreslået") : ''}
+        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "budgetforslag") ? renderGenopretningBox(r, "foreslået", k.id) : ''}
       </div>
       ` : ''}
 
       <div class="brief-section">
         <h3>Socialområdet <span class="kilde-tag">${r.resumeSocial ? 'Kilde: forlig' : ''}</span></h3>
         <p class="${!r.resumeSocial?'empty-cell':''}">${r.resumeSocial ? escapeHtml(r.resumeSocial) : 'Ingen aftale landet endnu — opdateres når forhandlingerne er afsluttet.'}</p>
-        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "forlig") ? renderGenopretningBox(r, "tilført") : ''}
+        ${(typeof r.socialGenopretningMio === "number" && r.socialGenopretningKilde === "forlig") ? renderGenopretningBox(r, "tilført", k.id) : ''}
+        ${(typeof r.socialBesparelseMio === "number") ? renderBesparelseBox(r, k.id) : ''}
       </div>
       <div class="brief-section">
         <h3>Beskæftigelsesområdet <span class="kilde-tag">${r.resumeBeskaeftigelse ? 'Kilde: forlig' : ''}</span></h3>
