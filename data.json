@@ -356,9 +356,9 @@
       ],
       "resumeSocial": "7 ud af 8 partier (alle undtagen Danmarksdemokraterne) står bag aftalen. Handicap- og psykiatriområdet (det specialiserede voksenområde) tilføres 97 mio. kr. oven i de 80 mio. kr., der allerede var afsat sidste år — og tidligere besluttede servicereduktioner på området bliver ikke gennemført. Der afsættes 1 mio. kr. til Headspace til psykisk sårbare unge. På ældreområdet udvides daghjemskapaciteten til demensramte (3 pladser i Tarm, 5 i Skjern), og plejeboligområdet får tilbageført 3,8 mio. kr. Der afsættes desuden midler til socialrådgivere på skoler og dagtilbud til tidlig, forebyggende indsats, samt en udvidelse af tilskuddet til pasning af eget barn.",
       "resumeBeskaeftigelse": "Ikke omtalt specifikt i kommunens pressemeddelelse om aftalen.",
-      "socialGenopretningMio": 97,
+      "socialGenopretningMio": 23.4,
       "socialGenopretningKilde": "forlig",
-      "socialGenopretningNote": "97 mio. kr. tilført det specialiserede voksenområde (handicap/psykiatri) for at dække udgiftspresset og undgå tidligere planlagte servicereduktioner. Kommer oven i 80 mio. kr. afsat sidste år.",
+      "socialGenopretningNote": "RETTET (3. sep. 2026): Pressemeddelelsens '97 mio. kr.' er den SAMLEDE sum over hele budgetperioden 2027-2030 til Handicap og Psykiatri (bekræftet i kommunens egen talnøgletalstabel: 23,386 mio. kr. i 2027 + 25,190 i 2028 + 24,190 i 2029 + 23,190 i 2030 ≈ 96 mio. kr. i alt). 2027-delen alene er 23,4 mio. kr., og det er det tal, der indgår i tælleren her, for at være sammenlignelig med de øvrige kommuner (som alle kun tæller 2027).",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "fredericia": {
@@ -848,16 +848,28 @@
       ],
       "resumeSocial": "",
       "resumeBeskaeftigelse": "",
-      "socialGenopretningMio": 64,
+      "socialGenopretningMio": 27.5,
       "socialGenopretningKilde": "budgetforslag",
-      "socialGenopretningNote": "64 mio. kr. årligt fra 2027 foreslået til det specialiserede socialområde for at følge det stigende udgiftsbehov. Dette er forvaltningens forslag — ikke et indgået forlig, og tallet kan ændre sig i forhandlingerne.",
+      "socialGenopretningNote": "Se de to poster ovenfor for detaljer og kilde.",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z",
       "budgetforslagLink": {
         "titel": "Budgetforslag 2027: Rødovre holder fast i velfærden (rk.dk)",
         "url": "https://rk.dk/service-og-pressemeddelelser/service-og-pressemeddelelser-2026/budgetforslag-2027"
       },
       "budgetforslagSocialNaevnt": "Budgetforslaget (ikke forlig) indeholder besparelser/effektiviseringer på ca. 27 mio. kr., primært drevet af udgifter til fordrevne ukrainere. Det specialiserede socialområde løftes med 64 mio. kr. årligt fra 2027 for at følge det stigende udgiftsbehov. Intet forlig indgået endnu.",
-      "budgetforslagBeskaeftigelseNaevnt": ""
+      "budgetforslagBeskaeftigelseNaevnt": "",
+      "socialGenopretningPoster": [
+        {
+          "label": "Det specialiserede voksenområde",
+          "beloeb": 20,
+          "grund": "Udgifterne til køb af tilbud på det specialiserede voksenområde steg markant i 2025 (merforbrug ca. 13 mio. kr.); stigningen får fuld effekt i 2026, og der forventes et merbehov i 2027. Årlig post, identisk 2027-2030."
+        },
+        {
+          "label": "Det specialiserede børneområde",
+          "beloeb": 7.5,
+          "grund": "9 flere anbringelser siden december 2024, og en tilvækst i antal børn/unge med behov for støtte på ca. 6 pct. årligt. Der forventes et merbehov i 2027. Årlig post, identisk 2027-2030."
+        }
+      ]
     },
     "herning": {
       "status": "forhandling",
