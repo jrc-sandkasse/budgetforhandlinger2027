@@ -416,6 +416,22 @@
   .aarhus-faktaboks-title{font-family:'Fraunces', serif;font-size:16px;font-weight:600;margin-bottom:4px;}
   .aarhus-faktaboks-sub{font-size:12px;color:var(--ink-soft);margin-bottom:12px;}
   .aarhus-faktaboks-subheading{font-size:13px;font-weight:600;margin-bottom:8px;}
+  .aarhus-self-row{background:#F4F0E6;}
+  .aarhus-self-row td{font-weight:600;}
+  .aarhus-self-tag{
+    font-size:10px;
+    font-weight:600;
+    color:var(--ink-soft);
+    background:#fff;
+    border:1px solid var(--line);
+    padding:2px 7px;
+    border-radius:10px;
+    margin-left:6px;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  .rank-cell{font-size:15px;text-align:center;white-space:nowrap;}
+  .aarhus-faktaboks-table{table-layout:fixed;}
   .aarhus-faktaboks-table{width:100%;border-collapse:collapse;}
   .aarhus-faktaboks-table th{
     text-align:left;font-size:11px;color:var(--ink-soft);font-weight:500;
@@ -619,7 +635,7 @@ let NEWS_ITEMS = [
 const SEED_VERSION_KEY = "budgetforhandlinger-seed-version";
 // Bump denne, hver gang SEED_DATA nedenfor opdateres med ny research —
 // så synkroniseres den friske data automatisk, næste gang siden åbnes.
-const SEED_VERSION = "2026-09-03-16";
+const SEED_VERSION = "2026-09-04-2";
 
 // Research pr. 31. august 2026. Datoer for Aarhus, Aalborg og Randers er dels bekræftede,
 // dels et kvalificeret skøn ud fra tidligere års mønster, da den endelige tidsplan for 2027
@@ -2688,7 +2704,7 @@ let SEED_DATA = {
 };
 
 let state = {}; // id -> record
-let lastUpdated = "2026-09-03";
+let lastUpdated = "2026-09-04";
 let filters = { region: "Alle", status: "Alle", search: "" };
 let sortBy = "aktualitet"; // "aktualitet" eller et kolonnenavn
 let sortDir = "asc";
@@ -3040,33 +3056,56 @@ function emptyRow(){
 }
 
 function renderAarhusFaktaboks(){
-  const genopretningRows = KOMMUNER
-    .map(k => ({ k, r: state[k.id] }))
-    .filter(x => x.r && typeof x.r.socialGenopretningMio === "number")
-    .filter(x => x.k.id !== AARHUS_ID);
+  const buildRankedList = (mioField) => {
+    const list = KOMMUNER
+      .map(k => ({ k, r: state[k.id] }))
+      .filter(x => x.r && typeof x.r[mioField] === "number")
+      .map(({k,r}) => {
+        const isAarhus = k.id === AARHUS_ID;
+        // For Aarhus selv er "sammenligningstal" bare dens eget beløb.
+        // For andre kommuner er det beløbet omregnet til Aarhus-ækvivalent, så de kan rangeres på samme skala.
+        const comparable = isAarhus ? r[mioField] : aarhusEkvivalent(k.id, r[mioField]);
+        return { k, r, isAarhus, mio: r[mioField], comparable };
+      })
+      .sort((a,b) => (b.comparable ?? -1) - (a.comparable ?? -1));
+    return list;
+  };
 
-  const besparelseRows = KOMMUNER
-    .map(k => ({ k, r: state[k.id] }))
-    .filter(x => x.r && typeof x.r.socialBesparelseMio === "number")
-    .filter(x => x.k.id !== AARHUS_ID);
+  const genopretningList = buildRankedList('socialGenopretningMio');
+  const besparelseList = buildRankedList('socialBesparelseMio');
 
-  if(!genopretningRows.length && !besparelseRows.length) return '';
+  if(!genopretningList.length && !besparelseList.length) return '';
 
   const popCell = (id) => {
     const pop = POPULATION[id];
     return pop ? pop.toLocaleString('da-DK') : `<span class="pop-missing">⚠️ mangler</span>`;
   };
 
-  const renderTable = (rows, mioField, badge) => `
+  const medal = (rank) => rank === 1 ? '🏆' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : `${rank}.`;
+
+  const renderTable = (list) => `
     <table class="aarhus-faktaboks-table">
+      <colgroup>
+        <col style="width:8%"><col style="width:28%"><col style="width:18%"><col style="width:18%"><col style="width:28%">
+      </colgroup>
       <thead>
-        <tr><th>Kommune</th><th>Indbyggertal</th><th>Beløb</th><th>Aarhus-ækvivalent</th></tr>
+        <tr><th></th><th>Kommune</th><th>Indbyggertal</th><th>Beløb</th><th>Aarhus-ækvivalent</th></tr>
       </thead>
       <tbody>
-        ${rows.map(({k,r}) => {
-          const mio = r[mioField];
-          const eq = aarhusEkvivalent(k.id, mio);
-          return `<tr><td>${k.navn}</td><td>${popCell(k.id)}</td><td>${mio.toLocaleString('da-DK')} mio. kr.</td><td>${eq !== null ? `<strong>${eq.toLocaleString('da-DK')} mio. kr.</strong>` : `<span class="pop-missing">⚠️ Befolkningstal mangler</span>`}</td></tr>`;
+        ${list.map((item, i) => {
+          const rank = i + 1;
+          const eqCell = item.isAarhus
+            ? `<em>—</em>`
+            : (item.comparable !== null ? `<strong>${item.comparable.toLocaleString('da-DK')} mio. kr.</strong>` : `<span class="pop-missing">⚠️ Befolkningstal mangler</span>`);
+          return `
+            <tr class="${item.isAarhus ? 'aarhus-self-row' : ''}">
+              <td class="rank-cell">${medal(rank)}</td>
+              <td>${item.k.navn}${item.isAarhus ? ' <span class="aarhus-self-tag">Aarhus</span>' : ''}</td>
+              <td>${popCell(item.k.id)}</td>
+              <td>${item.mio.toLocaleString('da-DK')} mio. kr.</td>
+              <td>${eqCell}</td>
+            </tr>
+          `;
         }).join('')}
       </tbody>
     </table>
@@ -3075,16 +3114,16 @@ function renderAarhusFaktaboks(){
   return `
     <div class="aarhus-faktaboks">
       <div class="aarhus-faktaboks-title">📏 Sat i forhold til Aarhus' størrelse</div>
-      <div class="aarhus-faktaboks-sub">Hvad de dokumenterede 2027-beløb ville svare til, hvis samme indsats pr. indbygger blev lavet i Aarhus (${POPULATION[AARHUS_ID].toLocaleString('da-DK')} indbyggere, DST).</div>
+      <div class="aarhus-faktaboks-sub">Hvad de dokumenterede 2027-beløb ville svare til, hvis samme indsats pr. indbygger blev lavet i Aarhus (${POPULATION[AARHUS_ID].toLocaleString('da-DK')} indbyggere, DST). Rangeret på denne skala — Aarhus selv indgår med sit eget beløb og er markeret.</div>
 
-      ${genopretningRows.length ? `
+      ${genopretningList.length ? `
         <div class="aarhus-faktaboks-subheading"><span class="money-badge">💵 Tilførsel</span></div>
-        ${renderTable(genopretningRows, 'socialGenopretningMio')}
+        ${renderTable(genopretningList)}
       ` : ''}
 
-      ${besparelseRows.length ? `
+      ${besparelseList.length ? `
         <div class="aarhus-faktaboks-subheading" style="margin-top:16px;"><span class="knife-badge">🔪 Besparelse</span></div>
-        ${renderTable(besparelseRows, 'socialBesparelseMio')}
+        ${renderTable(besparelseList)}
       ` : ''}
     </div>
   `;
