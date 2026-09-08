@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-04",
+  "lastUpdated": "2026-09-07",
   "SEED_DATA": {
     "koebenhavn": {
       "status": "aftale_indgaaet",
@@ -28,9 +28,9 @@
       "resumeSocial": "Aftalen indeholder et markant genopretningsspor: 'Nedbringelse af visitationslisten relateret til forsyningsforpligtelsen på botilbudsområdet' (SO01) — baggrunden er, at Ankestyrelsen i december 2024 fastslog, at København har handlet i strid med forsyningsforpligtelsen ved at lade borgere stå for længe på venteliste til et botilbud. Der afsættes 211,1 mio. kr. i 2027, 327,1 mio. kr. i 2028, 334,9 mio. kr. i 2029 og 281,0 mio. kr. i 2030 — i alt 1.154,1 mio. kr. over fire år — til afvikling af ventelisten, bl.a. via køb af eksterne pladser og åbning af 330 nye kommunale botilbudspladser frem mod 2032. Herudover: 93,2 mio. kr. (2027) til handleplan for botilbuddet Boserupvej (påbud fra Socialtilsynet), 10,9 mio. kr. (2027) til botilbudspladser til borgere revisiteret fra Kildevæld, 8,9 mio. kr./år til stigende udgifter på krisecentre og herberger, 8,1 mio. kr. (2027) + 7,3 mio. kr./år (2028-30) til handleplan på Sundholm Pleje (påbud fra Arbejdstilsynet/Socialtilsynet), og 20,2 mio. kr. til modernisering af kvindeherberget på Sundholmsvej 24A. Kilde: den fulde aftaletekst (kk.dk).",
       "resumeBeskaeftigelse": "Mindre, målrettede poster: 17,5 mio. kr. (anlæg 2026-2032) til nyt beskæftigelsestilbud på Boserupvej (SO15), styrkelse af fleksjobområdet (BI51), samt AI i beskæftigelsesindsatsen (BI06). Under 'Sikker By' afsættes derudover 11,6 mio. kr./år (2027-2029) til job og uddannelse til dømte og varetægtsfængslede, og 1,3 mio. kr./år til virksomhedsopsøgende medarbejdere. Ingen store, samlede genopretningsbeløb på selve beskæftigelsesområdet, i modsætning til socialområdet.",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z",
-      "socialGenopretningMio": 332.2,
+      "socialGenopretningMio": 324.1,
       "socialGenopretningKilde": "forlig",
-      "socialGenopretningNote": "Samlet 332.2 mio. kr. i 2027 på tværs af FEM poster, der alle dækker eksisterende pres/påbud (ikke nye indsatser): 211,1 mio. kr. til at afvikle ventelisten på botilbudsområdet (Ankestyrelsen fastslog dec. 2024, at KK brød forsyningsforpligtelsen); 93,2 mio. kr. til handleplan for botilbuddet Boserupvej (påbud fra Socialtilsynet); 10,9 mio. kr. til botilbudspladser til borgere revisiteret fra Kildevæld (tidligere Borgervænget); 8,9 mio. kr. til stigende udgifter ved køb af krisecenter-/herbergspladser; 8,1 mio. kr. til handleplan for botilbuddet Sundholm Pleje (påbud fra Arbejdstilsynet/Socialtilsynet). Alle fem beløb fortsætter og stiger typisk i 2028-2030 — kun 2027-delen er talt med her for at holde metoden ensartet.",
+      "socialGenopretningNote": "Samlet 324.1 mio. kr. i 2027 på tværs af fire poster, der alle dækker eksisterende pres/påbud (ikke nye indsatser): 211,1 mio. kr. til at afvikle ventelisten på botilbudsområdet (Ankestyrelsen fastslog dec. 2024, at KK brød forsyningsforpligtelsen); 93,2 mio. kr. til handleplan for botilbuddet Boserupvej (påbud fra Socialtilsynet); 10,9 mio. kr. til botilbudspladser til borgere revisiteret fra Kildevæld (tidligere Borgervænget); 8,9 mio. kr. til stigende udgifter ved køb af krisecenter-/herbergspladser. En femte post (8,1 mio. kr. til handleplan for botilbuddet Sundholm Pleje) er bevidst udeladt — den går bl.a. til opnormering af ansatte og vurderes ikke som et reelt løft i samme forstand som de øvrige.",
       "socialGenopretningPoster": [
         {
           "label": "Botilbuds-venteliste (SO01)",
@@ -51,11 +51,6 @@
           "label": "Krisecentre/herberger (SO03)",
           "beloeb": 8.9,
           "grund": "Stigende pris/aktivitet på pladser, kommunen allerede køber — ikke en udvidelse af tilbuddet."
-        },
-        {
-          "label": "Handleplan Sundholm Pleje (SO09)",
-          "beloeb": 8.1,
-          "grund": "Påbud fra både Arbejdstilsynet og Socialtilsynet — samme logik som Boserupvej."
         }
       ],
       "socialGenopretningUsikkerhedsnote": "Aftaleteksten indeholder tre yderligere poster (SO19, SO20, SO21) under overskriften 'Socialområdet – specifikke udfordringer', som jeg endnu ikke har kunnet læse indholdet af (dokumentet kunne ikke hentes til den side). Beløbet her er derfor et MINIMUM, ikke nødvendigvis det fulde billede."
@@ -119,18 +114,18 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "vejle": {
-      "status": "ikke_startet",
+      "status": "aftale_indgaaet",
       "forventetForhandlingsStart": "2026-09-02",
-      "forventetAftaleDato": "2026-09-23",
-      "aftaleDato": "",
+      "forventetAftaleDato": "2026-09-03",
+      "aftaleDato": "2026-09-03",
       "vedtagelsesDato": "2026-09-30",
       "links": [
         {
-          "titel": "Kommunens økonomi (vejle.dk)",
-          "url": "https://www.vejle.dk/da/om-os/aabenhed-og-indblik/kommunens-oekonomi/"
+          "titel": "SF efter forlig i Vejle: 'Et tandløst budget' (DK Nyt)",
+          "url": "https://www.dknyt.dk/tema/budget-2027"
         }
       ],
-      "resumeSocial": "",
+      "resumeSocial": "Bredt forlig landet (SF med i aftalen, men kalder det selv 'et tandløst budget'). Budgettet indeholder en række varige investeringer. Der afsættes 60 mio. kr. som følge af EU-dommen om overtidsbetaling til deltidsansatte — dette er en pålagt merudgift, ikke en lokalt besluttet social-tilførsel, og tælles derfor ikke med i genopretningstælleren. Ingen specifikke handicap-/psykiatrital fundet.",
       "resumeBeskaeftigelse": "",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
@@ -356,9 +351,9 @@
       ],
       "resumeSocial": "7 ud af 8 partier (alle undtagen Danmarksdemokraterne) står bag aftalen. Handicap- og psykiatriområdet (det specialiserede voksenområde) tilføres 97 mio. kr. oven i de 80 mio. kr., der allerede var afsat sidste år — og tidligere besluttede servicereduktioner på området bliver ikke gennemført. Der afsættes 1 mio. kr. til Headspace til psykisk sårbare unge. På ældreområdet udvides daghjemskapaciteten til demensramte (3 pladser i Tarm, 5 i Skjern), og plejeboligområdet får tilbageført 3,8 mio. kr. Der afsættes desuden midler til socialrådgivere på skoler og dagtilbud til tidlig, forebyggende indsats, samt en udvidelse af tilskuddet til pasning af eget barn.",
       "resumeBeskaeftigelse": "Ikke omtalt specifikt i kommunens pressemeddelelse om aftalen.",
-      "socialGenopretningMio": 23.4,
+      "socialGenopretningMio": 24.4,
       "socialGenopretningKilde": "forlig",
-      "socialGenopretningNote": "RETTET (3. sep. 2026): Pressemeddelelsens '97 mio. kr.' er den SAMLEDE sum over hele budgetperioden 2027-2030 til Handicap og Psykiatri (bekræftet i kommunens egen talnøgletalstabel: 23,386 mio. kr. i 2027 + 25,190 i 2028 + 24,190 i 2029 + 23,190 i 2030 ≈ 96 mio. kr. i alt). 2027-delen alene er 23,4 mio. kr., og det er det tal, der indgår i tælleren her, for at være sammenlignelig med de øvrige kommuner (som alle kun tæller 2027).",
+      "socialGenopretningNote": "RETTET: 22,2 mio. kr. (Budgetramme Myndighed) + 2,2 mio. kr. (Annullering af servicereduktioner) = 24,4 mio. kr. En tredje linje i talnøgletallene ('Ressourcer til Myndighed i Handicap og Psykiatri – finansiering via budgetramme', -1,0 mio. kr.) beskriver, HVORDAN en del af beløbet finansieres internt (omfordeling inden for budgetrammen) — det er ikke en reel reduktion af det tilførte beløb, og indgår derfor ikke som et fradrag her.",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "fredericia": {
@@ -405,38 +400,62 @@
       "forventetAftaleDatoSkoen": true
     },
     "kolding": {
-      "status": "forhandling",
-      "forventetForhandlingsStart": "2026-08-09",
-      "forventetAftaleDato": "2026-08-19",
-      "aftaleDato": "",
-      "vedtagelsesDato": "2026-09-23",
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "2026-08-31",
+      "aftaleDato": "2026-08-31",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Kolding Kommune – økonomi",
-          "url": "https://www.kolding.dk/om-kommunen/oekonomi"
+          "titel": "Kæmpe spareplan i Kolding: 136,7 millioner skal findes (tvSyd)",
+          "url": "https://www.tvsyd.dk/kolding/kaempe-spareplan-i-kolding-1367-millioner-skal-findes-09d8c"
+        },
+        {
+          "titel": "To partier uden for Koldings budgetforlig (tvSyd)",
+          "url": "https://www.tvsyd.dk/kolding/to-partier-uden-for-koldings-budgetforlig-549fd"
         }
       ],
-      "resumeSocial": "",
-      "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
-      "forventetForhandlingsStartSkoen": true
+      "resumeSocial": "Forliget (indgået onsdag 26. aug./ca. 31. aug. 2026) står 21 af 25 byrådsmedlemmer bag — kun Dansk Folkeparti og Enhedslisten står udenfor. Der er tale om en betydelig, flerårig spareplan: 16,7 mio. kr. i 2027, 56,7 mio. kr. i 2028, ca. 97 mio. kr. i 2029 og 136,7 mio. kr. i 2030 (svarende til en generel besparelse på ca. 0,73 pct. årligt på alle politikområder). Besparelserne rammer ifølge tvSyd bredt — bl.a. skoler, ældreområdet og daginstitutioner — men politikerne har endnu IKKE besluttet, præcis hvad der skal skæres væk. Der er derfor ikke lagt noget beløb ind i besparelsestælleren endnu, da der ikke findes en konkret, socialområde-specifik post at pege på. TILFØJET: Forligsteksten viser, at 'næsten 150 mio. kr.' allerede var indarbejdet i budgetgrundlaget før forhandlingerne, herunder 58,5 mio. kr. (32,9 mio. kr. netto) til opdrift på det specialiserede socialområde. Der er desuden indarbejdet driftsmidler til det nye plejehjem Vilhelmines Have (34,82 mio. kr. i 2029, 46,43 mio. kr. i 2030) og til Dorotheas Have, som sættes i drift i 2028 — disse er ældre-/anlægsrelaterede og ikke talt med i tælleren.",
+      "resumeBeskaeftigelse": "Forligsteksten nævner separat 'Udgiftspres på arbejdsmarkedsområdet: 33,00 mio. kr. årligt' (ARB-S-06) — en dokumenteret, tilsvarende udgiftsstigning på selve beskæftigelsesområdet. Dette beløb er IKKE talt med i socialområde-tælleren (som er afgrænset til socialområdet), men nævnes her som kontekst. Sig til, hvis du vil have en tilsvarende 'tilførsel til beskæftigelsesområdet'-tæller oprettet, parallelt til den udvidede besparelsestæller.",
+      "socialGenopretningMio": 32.9,
+      "socialGenopretningKilde": "forlig",
+      "socialGenopretningNote": "Fra selve forligsteksten: 'Opdrift på det specialiserede socialområde: 58,50 mio. kr. (32,90 mio. kr. ved modregning af forventede refusioner).' Beløbet var allerede indarbejdet i det tekniske budgetgrundlag FØR forhandlingerne gik i gang — en dokumenteret, uundgåelig udgiftsstigning, ikke et nyt tiltag. Nettotallet (efter forventet statslig refusion) er brugt her som det reelle beløb, kommunen selv bærer.",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "toender": {
-      "status": "forhandling",
-      "forventetForhandlingsStart": "2026-08-24",
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
       "forventetAftaleDato": "2026-09-03",
-      "aftaleDato": "",
-      "vedtagelsesDato": "2026-10-09",
+      "aftaleDato": "2026-09-03",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Budget (toender.dk)",
-          "url": "https://www.toender.dk/din-kommune/oekonomi/budget"
+          "titel": "Fuld tekst: Budgetforlig 2027 (Tønder Kommune, via sydnyt.dk)",
+          "url": "https://sydnyt.dk/wp-content/uploads/2026/09/Budgetforlig-2027.pdf"
         }
       ],
-      "resumeSocial": "",
+      "resumeSocial": "Alle partier i Kommunalbestyrelsen (Slesvigsk Parti, Venstre, Tønder Listen, Socialdemokratiet, Dansk Folkeparti, Det Konservative Folkeparti, SF, Liberal Alliance, Danmarksdemokraterne) står bag aftalen (3. sep. 2026). 5,6 mio. kr. afsættes til at imødegå udgiftspres på anbringelsesområdet for børn/unge. Derudover fortsætter arbejdet med kernevelfærd for voksne med særlige behov (renovering af Solgården, udbygning af pladser på Lærkely) uden et selvstændigt kr.-beløb i teksten. Ældreområdet får 3,666-18,477 mio. kr. (2027-2030) pga. ældrereformen — ikke talt med.",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
-      "forventetForhandlingsStartSkoen": true
+      "socialGenopretningMio": 5.6,
+      "socialGenopretningKilde": "forlig",
+      "socialGenopretningNote": "Fra selve forligsteksten: 'Derudover afsættes 5,6 mio. kr. til at imødegå udgiftspresset omkring børn, der anbringes uden for hjemmet.' Direkte hul-lukning på det specialiserede børneområde. Bemærk: der tilføres desuden 3,666 mio. kr. i 2027 (stigende til 18,477 mio. kr. i 2030) til ældreområdet pga. ældrereformen og flere ældre borgere — denne post er IKKE talt med, da den ligger uden for det specialiserede socialområde (samme afgrænsning som ved Struer).",
+      "socialGenopretningPoster": [],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "varde": {
       "status": "forhandling",
@@ -564,7 +583,7 @@
           "url": "https://www.folketidende.dk/nyheder/borgmester-kalder-det-en-kaempe-mavepuster-sa-ma-staten-saette-os-under-administration/5340349"
         }
       ],
-      "resumeSocial": "Lolland Kommune er i en generel, alvorlig kommunaløkonomisk krise — den handler IKKE primært om socialområdet, men om faldende befolkningstal (ca. 10.000 færre borgere), faldende skatteindtægter og et udligningssystem, som borgmester Marie-Louise Brehm Nielsen (Din Stemme) kalder skævt. Forløb: Kommunen meldte i august ud, at der manglede 531 mio. kr. i budget 2027 (danskekommuner.dk, 12. aug). Den 27. august var hullet reduceret til 347 mio. kr. (TV2 ØST) — en forbedring på 184 mio. kr., hvoraf 73 mio. kr. skyldes et BEDRE resultat på beskæftigelsesområdet (se nedenfor), 48 mio. kr. udskudte byggerier, 20 mio. kr. lavere pris-/lønstigninger end ventet, og 21 mio. kr. låneadgang. Efterfølgende fik kommunen et statsligt særtilskud på 223 mio. kr. (ud af 333 mio. kr. ansøgt). Der resterer nu et hul på ca. 100-110 mio. kr., som borgmesteren nægter at lade byrådet finde — hun advarer om, at kommunen i så fald bør sættes under administration af staten (Kristeligt Dagblad/Folketidende, ultimo aug./primo sep. 2026).",
+      "resumeSocial": "Lolland Kommune er i en generel, alvorlig kommunaløkonomisk krise — IKKE primært om socialområdet, men om faldende befolkningstal, faldende skatteindtægter og et udligningssystem, som borgmester Marie-Louise Brehm Nielsen (Din Stemme) kalder skævt. Hullet er forbedret fra 531 mio. kr. til 347 mio. kr. (forbedring på 184 mio. kr.: 73 mio. kr. fra bedre-end-ventet beskæftigelsesresultat, 48 mio. kr. udskudte byggerier, 20 mio. kr. lavere pris-/lønstigninger, 21 mio. kr. låneadgang). Kommunen har modtaget det største særtilskud i landet (223 mio. kr. + 16 mio. kr. lånedispensation). Borgmesteren siger til NB-Kommune: 'Jeg er næsten sikker på, at vi bliver lagt under statslig administration', hvis resten af hullet (ca. 100-110 mio. kr.) ikke kan findes. Intet forlig indgået endnu.",
       "resumeBeskaeftigelse": "Positiv udvikling: Ifølge en pressemeddelelse fra Lolland Kommune ('Budget 2027: Fremgang på beskæftigelsesområdet') er økonomien på beskæftigelsesområdet 73 mio. kr. bedre end oprindeligt budgetteret, fordi flere er kommet i job og færre er på varig forsørgelse. Udvalgsformand Vibeke Grave (Social- og Arbejdsmarkedsudvalget) forklarer det med en omlægning til færre, virksomhedsrettede indsatser og tættere opfølgning på den enkelte borger. Dette er IKKE en besparelse eller en reform-effekt, men et bedre-end-ventet resultat af den førte beskæftigelsespolitik — indgår derfor ikke i nogen af tællerne.",
       "sidstOpdateret": "2026-08-31T00:00:00.000Z",
       "forventetForhandlingsStartSkoen": true,
@@ -612,21 +631,32 @@
       "sidstOpdateret": "2026-08-31T00:00:00.000Z"
     },
     "roskilde": {
-      "status": "forhandling",
-      "forventetForhandlingsStart": "2026-08-23",
-      "forventetAftaleDato": "2026-09-02",
-      "aftaleDato": "",
-      "vedtagelsesDato": "2026-10-08",
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "2026-09-01",
+      "aftaleDato": "2026-09-01",
+      "vedtagelsesDato": "2026-10-07",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Budget (roskilde.dk)",
-          "url": "https://roskilde.dk/da-dk/om-kommunen/okonomi/budget"
+          "titel": "Budget 2027: En investering i fremtiden (roskilde.dk)",
+          "url": "https://www.roskilde.dk/da-dk/nyheder/budget-2027-en-investering-i-fremtiden/"
         }
       ],
-      "resumeSocial": "",
+      "resumeSocial": "Forligskreds: Socialdemokratiet, Det Konservative Folkeparti, SF, Venstre, Liberal Alliance, Dansk Folkeparti og Lokallisten Roskilde (1. sep. 2026). Beskrives som et 'robust budget' med investeringer i fremtiden og omstillinger på skoleområdet. Høring fra 11. sep, 2. behandling/endelig vedtagelse 7. okt. 2026. Ingen konkrete socialbeløb fundet i det tilgængelige materiale. Se desuden 14 mio. kr. i 2027 og frem til det specialiserede voksenområde (finansiering af aktivitets- og prisstigninger) — lagt i genopretningstælleren.",
       "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
-      "forventetForhandlingsStartSkoen": true
+      "socialGenopretningMio": 14,
+      "socialGenopretningKilde": "forlig",
+      "socialGenopretningNote": "Fra selve aftaleteksten, afsnit 'Finansiering til det specialiserede voksenområde': 'På det specialiserede voksenområde kan der i Roskilde såvel som på landsplan konstateres et fortsat pres på udgifterne. Udgiftspresset følger af dels et stigende antal borgere i målgruppen, men også af stigende priser på botilbud og dags- og aktivitetstilbud.' Derfor afsættes 14 mio. kr. i 2027 og frem til at finansiere aktivitets- og prisstigninger. Et klart eksempel på hul-lukning — dokumenteret, uundgåelig udgiftsstigning, ikke et nyt tiltag.",
+      "socialGenopretningPoster": [],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "slagelse": {
       "status": "ikke_startet",
@@ -672,21 +702,32 @@
       "forventetAftaleDatoSkoen": true
     },
     "bornholm": {
-      "status": "forhandling",
-      "forventetForhandlingsStart": "2026-08-23",
-      "forventetAftaleDato": "2026-09-02",
-      "aftaleDato": "",
-      "vedtagelsesDato": "2026-10-08",
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "2026-09-04",
+      "aftaleDato": "2026-09-04",
+      "vedtagelsesDato": "",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
+      "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Budget (bornholm.dk)",
-          "url": "https://bornholm.dk/politik-demokrati-og-indflydelse/oekonomi/budget"
+          "titel": "Læs budgetaftalen her (TV2 Bornholm)",
+          "url": "https://www.tv2bornholm.dk/bornholm/laes-budgetaftalen-her-c52b3"
         }
       ],
-      "resumeSocial": "",
-      "resumeBeskaeftigelse": "",
-      "sidstOpdateret": "2026-08-31T00:00:00.000Z",
-      "forventetForhandlingsStartSkoen": true
+      "resumeSocial": "Toårigt budget 2027-2028. Forligskreds: Venstre, Dansk Folkeparti, Socialdemokratiet, SF, Det Konservative Folkeparti og Kristendemokraterne (Enhedslisten udenfor). Det specialiserede voksenområde og den nære ældrepleje friholdes for store besparelser. Konkret: det specialiserede børne-/ungehjem på Sagavej udvides; 0,614 mio. kr. til støttede ophold hos plejefamilier; 1 mio. kr. til hjemmepasning; ekstra midler til det specialiserede socialområde og specialundervisning. Besparelser rammer i stedet bl.a. filialbiblioteker uden for Rønne/Nexø, vejvedligehold, erhvervsfremme, turistinformationer og aftenskoletilskud — altså IKKE socialområdet. Ingen tal lagt i tællerne, da de sociale poster er for spredte/små til en samlet, sammenlignelig sum.",
+      "resumeBeskaeftigelse": "Social- og Beskæftigelsesudvalget indgår i det samlede sparekatalog, men en eventuel kobling til beskæftigelsesreformen er ikke bekræftet i det tilgængelige materiale.",
+      "socialGenopretningMio": null,
+      "socialGenopretningKilde": "",
+      "socialGenopretningNote": "",
+      "socialGenopretningPoster": [],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "broendby": {
       "status": "ikke_startet",
@@ -1041,53 +1082,58 @@
       "forventetForhandlingsStartSkoen": true
     },
     "frederiksberg": {
-      "status": "forhandling",
-      "forventetForhandlingsStart": "2026-09-11",
-      "forventetAftaleDato": "2026-09-21",
-      "aftaleDato": "",
-      "vedtagelsesDato": "2026-10-06",
+      "status": "aftale_indgaaet",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
+      "aftaleDato": "2026-09-01",
+      "vedtagelsesDato": "",
       "budgetforslagDato": "",
       "budgetforslagLink": null,
       "budgetforslagSocialNaevnt": "",
       "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Historisk kilde (Budget 2026)",
-          "url": "https://www.frederiksberg.dk/kommunen/oekonomi/budget-2026"
+          "titel": "Ny budgetaftale styrker velfærden og gør Frederiksberg grønnere (Via Ritzau)",
+          "url": "https://via.ritzau.dk/pressemeddelelse/15144170/ny-budgetaftale-styrker-velfaerden-og-gor-frederiksberg-gronnere?lang=da"
         }
       ],
-      "resumeSocial": "",
+      "resumeSocial": "Alle syv partier i kommunalbestyrelsen står bag aftalen. Det samlede specialiserede socialområde løftes med 57 mio. kr. i 2027 til nødvendige udgifter. Partierne gør desuden Sociolancen (opsøgende social-/sundhedsindsats) permanent. 30 mio. kr. afsættes til renovering af skolegårde og nye aktivitets-/legemiljøer i dagtilbud (børn og unges trivsel) — ikke talt med, da det er skole-/dagtilbudsområdet, ikke socialområdet snævert.",
       "resumeBeskaeftigelse": "",
-      "socialGenopretningMio": null,
-      "socialGenopretningKilde": "",
-      "socialGenopretningNote": "",
-      "sidstOpdateret": "",
-      "forventetForhandlingsStartSkoen": true,
-      "forventetAftaleDatoSkoen": true
+      "socialGenopretningMio": 57,
+      "socialGenopretningKilde": "forlig",
+      "socialGenopretningNote": "Fra kommunens egen pressemeddelelse: 'Det samlede specialiserede socialområde løftes med 57 mio. kr. i 2027 til nødvendige udgifter.' Ordlyden 'nødvendige udgifter' matcher direkte hul-lukning/genopretning, ikke en ny indsats.",
+      "socialGenopretningPoster": [],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "furesoe": {
       "status": "forhandling",
-      "forventetForhandlingsStart": "2026-09-07",
-      "forventetAftaleDato": "2026-09-17",
+      "forventetForhandlingsStart": "",
+      "forventetAftaleDato": "",
       "aftaleDato": "",
-      "vedtagelsesDato": "2026-10-08",
+      "vedtagelsesDato": "",
       "budgetforslagDato": "",
       "budgetforslagLink": null,
       "budgetforslagSocialNaevnt": "",
       "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Historisk kilde (Budget 2026)",
-          "url": "https://www.furesoe.dk/om-kommunen/fakta/oekonomi/budget/budget-2026"
+          "titel": "Forvaltningen: Sigtelinjerne vil udløse straf til Furesø (altomfuresoe.dk)",
+          "url": "https://altomfuresoe.dk/forvaltningen-sigtelinjerne-vil-udloese-straf-til-furesoe/"
         }
       ],
-      "resumeSocial": "",
+      "resumeSocial": "INGEN aftale landet endnu — budgettet skal først vedtages i oktober. Men en usædvanlig politisk udvikling: Et flertal (Socialdemokratiet, SF, Enhedslisten, Radikale Venstre og Konservative) har vedtaget 'Sigtelinjer for budget 2027-28' UDEN OM borgmester Nicolai Bechfeldt (V), som normalt sætter retningen med sit eget budgetoplæg — flertallet har i stedet 'taget serveretten fra borgmesteren' (1. viceborgmester Bettina Ugelvig, S). Forvaltningen advarer om, at sigtelinjerne overskrider servicerammen med 27 mio. kr., hvilket kan udløse en bødestraf på 16-17 mio. kr. Uenigheden drejer sig bl.a. om lånoptag og en generel opdrift i udgifterne, herunder på det specialiserede socialområde, som nævnes som en del af den underliggende udfordring.",
       "resumeBeskaeftigelse": "",
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
-      "sidstOpdateret": "",
-      "forventetForhandlingsStartSkoen": true
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
+      "sidstOpdateret": ""
     },
     "vordingborg": {
       "status": "forhandling",
@@ -1161,10 +1207,10 @@
       "forventetForhandlingsStartSkoen": true
     },
     "jammerbugt": {
-      "status": "ikke_startet",
+      "status": "aftale_indgaaet",
       "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
-      "aftaleDato": "",
+      "forventetAftaleDato": "2026-09-04",
+      "aftaleDato": "2026-09-04",
       "vedtagelsesDato": "",
       "budgetforslagDato": "",
       "budgetforslagLink": null,
@@ -1172,15 +1218,24 @@
       "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Kommunens økonomi (jammerbugt.dk)",
-          "url": "https://jammerbugt.dk/"
+          "titel": "Bred budgetaftale på plads i Jammerbugt (Jammerbugtposten)",
+          "url": "https://jammerbugtposten.dk/bred-enighed-om-budgettet/"
+        },
+        {
+          "titel": "Kommune med ny aftale: Vil løfte velfærden 'markant' (TV2 Nord)",
+          "url": "https://www.tv2nord.dk/jammerbugt/vil-lofte-velfaerden-markant-c4227"
         }
       ],
-      "resumeSocial": "OBS: Tidligere fejlagtigt markeret som 'Aftale indgået' på baggrund af en DK Nyt-artikel, som viste sig at være fra 8. september 2025 og omhandle Budget 2026 — ikke 2027. Rettet 1. sep. 2026. Ingen bekræftet 2027-status fundet endnu.",
+      "resumeSocial": "Alle 27 medlemmer af kommunalbestyrelsen står bag aftalen (4. sep. 2026) — fuld enighed. Aftalen indeholder et markant løft til børne-, ældre- og handicapområdet ifølge TV2 Nord, men uden at et konkret, opdelt kr.-beløb til selve socialområdet er fundet endnu. Klasseloftet sænkes til 24 elever fra 2027/28 (5 mio. kr. stigende til 9,7 mio. kr. — skoleområdet). Anlæg ca. 109 mio. kr. Konkret: 5,9 mio. kr. til ældreområdet og 10,4 mio. kr. til borgere med handicap (borgmester Christian Hem).",
       "resumeBeskaeftigelse": "",
-      "socialGenopretningMio": null,
-      "socialGenopretningKilde": "",
-      "socialGenopretningNote": "",
+      "socialGenopretningMio": 10.4,
+      "socialGenopretningKilde": "forlig",
+      "socialGenopretningNote": "Direkte citat fra borgmester Christian Hem: 'vi med budgettet har investeret 5,9 mio. kr. til ældreområdet samt 10,4 mio. kr. til borgere med handicap.' Kun handicap-delen (10,4 mio. kr.) er talt med — ældredelen (5,9 mio. kr.) er holdt udenfor, samme afgrænsning som ved Struer og Tønder.",
+      "socialGenopretningPoster": [],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
       "sidstOpdateret": ""
     },
     "laesoe": {
@@ -1337,29 +1392,31 @@
       "sidstOpdateret": ""
     },
     "norddjurs": {
-      "status": "forhandling",
+      "status": "aftale_indgaaet",
       "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
-      "aftaleDato": "",
+      "forventetAftaleDato": "2026-09-03",
+      "aftaleDato": "2026-09-03",
       "vedtagelsesDato": "",
-      "budgetforslagDato": "2026-09-08",
-      "budgetforslagLink": {
-        "titel": "Budgetforslag 2027-2030, 1. behandling (norddjurs.dk)",
-        "url": "https://norddjurs.dk/politik-og-indflydelse/budget-og-regnskab/budgettet-hvad-sker-der-lige-nu/indsend-dit-forslag-til-budgettet"
-      },
-      "budgetforslagSocialNaevnt": "Ny runde råderumsforslag berører bl.a. skole-, ældre- og socialområdet.",
+      "budgetforslagDato": "",
+      "budgetforslagLink": null,
+      "budgetforslagSocialNaevnt": "",
       "budgetforslagBeskaeftigelseNaevnt": "",
       "links": [
         {
-          "titel": "Budgetforslag 2027-2030, 1. behandling (norddjurs.dk)",
-          "url": "https://norddjurs.dk/politik-og-indflydelse/budget-og-regnskab/budgettet-hvad-sker-der-lige-nu/indsend-dit-forslag-til-budgettet"
+          "titel": "Norddjurs forbereder sig på dårligere tider (DK Nyt-tema)",
+          "url": "https://www.dknyt.dk/tema/budget-2027"
         }
       ],
-      "resumeSocial": "",
+      "resumeSocial": "Bredt flertal bag aftalen (dato/partikreds bør bekræftes mod kommunens egen pressemeddelelse). Prioriterer bl.a. renovering af skoler (ca. 136 mio. kr. 2026-2030); anlægsbudget ca. 24 mio. kr. over vejledende ramme. Kommunen 'forbereder sig på dårligere tider' ifølge overskriften — ingen specifikke socialbeløb fundet.",
       "resumeBeskaeftigelse": "",
       "socialGenopretningMio": null,
       "socialGenopretningKilde": "",
       "socialGenopretningNote": "",
+      "socialGenopretningPoster": [],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
       "sidstOpdateret": ""
     },
     "odder": {
@@ -1417,21 +1474,42 @@
       "sidstOpdateret": ""
     },
     "struer": {
-      "status": "forhandling",
+      "status": "aftale_indgaaet",
       "forventetForhandlingsStart": "",
-      "forventetAftaleDato": "",
-      "aftaleDato": "",
+      "forventetAftaleDato": "2026-09-02",
+      "aftaleDato": "2026-09-02",
       "vedtagelsesDato": "",
       "budgetforslagDato": "",
       "budgetforslagLink": null,
       "budgetforslagSocialNaevnt": "",
       "budgetforslagBeskaeftigelseNaevnt": "",
-      "links": [],
-      "resumeSocial": "",
+      "links": [
+        {
+          "titel": "Udvikling og økonomisk ansvarlighed: Samlet byråd indgår budgetaftale (struer.dk)",
+          "url": "https://www.struer.dk/nyheder/2026/september/byraad-enig-om-budget"
+        }
+      ],
+      "resumeSocial": "Samtlige partier i byrådet står bag aftalen (offentliggjort 2. sep. 2026, gældende for budget 2027 samt overslagsårene 2028-2030). Der tilføres 5 mio. kr. årligt fra 2027 til det specialiserede socialområde for børn og unge (tidlige/forebyggende indsatser) og yderligere 5 mio. kr. årligt fra 2027 til det specialiserede socialområde for voksne og handicappede. Desuden 5 mio. kr. årligt til ældreområdet (personlig/praktisk hjælp, helhedspleje) — ikke talt med i tælleren.",
       "resumeBeskaeftigelse": "",
-      "socialGenopretningMio": null,
-      "socialGenopretningKilde": "",
-      "socialGenopretningNote": "",
+      "socialGenopretningMio": 10,
+      "socialGenopretningKilde": "forlig",
+      "socialGenopretningNote": "Se de to poster ovenfor. Bemærk: der tilføres desuden 5 mio. kr. årligt fra 2027 til ældreområdet (personlig/praktisk hjælp og helhedspleje) — denne post er IKKE talt med, da den ligger uden for det specialiserede socialområde.",
+      "socialGenopretningPoster": [
+        {
+          "label": "Specialiseret socialområde, børn og unge",
+          "beloeb": 5,
+          "grund": "Prioritering af tidlige og forebyggende indsatser med fokus på koordinerede, helhedsorienterede løsninger. 5 mio. kr. årligt fra 2027."
+        },
+        {
+          "label": "Specialiseret socialområde, voksne og handicappede",
+          "beloeb": 5,
+          "grund": "Samme beløb tilføres voksen-/handicapområdet. 5 mio. kr. årligt fra 2027."
+        }
+      ],
+      "socialGenopretningUsikkerhedsnote": "",
+      "socialBesparelseMio": null,
+      "socialBesparelseKilde": "",
+      "socialBesparelseNote": "",
       "sidstOpdateret": ""
     },
     "assens": {
